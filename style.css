@@ -1,34 +1,7 @@
-#navigation_bar {
-    display: flex;
-    justify-self: center;
-    justify-items: center;
-    align-items: center;
-    width: 80%;
-    justify-content: space-evenly; 
-    gap: 2rem;               /* Space between links */
-    background: #ffffff;     /* Optional: add background */
-    padding: 1rem;           /* Optional: add padding */
-    border-radius: 8px;      /* Optional: rounded corners */
-    box-shadow: 0 2px 3px rgba(46, 34, 34, 0.1); /* Optional: subtle shadow */
-}
 
-
-
-#navigation_bar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-
-#navigation_bar a:hover {
-    color: #a949dd;
-}
-
-
+/* -----HEADER----- */
 header{
-    display: flex;
-    justify-content: space-around; /* Space between brand and nav */
+      display: flex;
     align-items: center;            /* Center items vertically */
     padding: 1rem 2rem;             /* Padding around the header */
     background-color: #96bbd4;
@@ -37,10 +10,58 @@ header{
     border-radius: 10px;             /* Optional: rounded corners */
 }
 
-h1{
-    text-shadow: 2px 2px 4px pink;
-    color: rgb(90, 75, 100);
+#navigation_bar {
+    align-self: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 100%;
+    align-items: center; /* Center items vertically */
+    justify-content:center; /*Center the navigation links */
+    gap: 6rem;               /* Space between links */
+    background: #ffffff;     /* Optional: add background */
+    padding: 12px 16px;          /* Optional: add padding */
+    border-radius: 8px;      /* Optional: rounded corners */
+    box-shadow: 0 2px 3px rgba(46, 34, 34, 0.1); /* Optional: subtle shadow */
 }
+
+#navigation_bar div a {
+    display : block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+   
+
+}
+
+ #navigation_bar div :hover {
+    background-color: #d7eaf7;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+ }
+
+
+
+#navigation_bar a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+
+
+
+.brand .logo {
+    height: 60px; /* Adjust the height as needed */
+    width: auto;  /* Maintain aspect ratio */
+    margin-right: 0.6rem; /* Space between logo and text */
+    margin-left: 2em;
+    ;
+}
+
+/* -----BODY----- */
 
 body {
     font-family: Arial, sans-serif;
@@ -52,14 +73,11 @@ body {
 
 
 
-.logo {
-    height: 60px; /* Adjust the height as needed */
-    width: auto;  /* Maintain aspect ratio */
-    margin-right: 0.6rem; /* Space between logo and text */
-}
 
 
-.brand{ justify-self: start; }   
+
+.brand{ margin-inline-start: 0;
+  }   
 
 #frontpage {
     display: block;
@@ -84,4 +102,40 @@ body {
     font-size: 1.1em;
     line-height: 1.6;
     color: #555;
+}
+
+.sections{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 40px;
+}
+.section_title{
+    width: 100%;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+.service_card , .review_card{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 1.5rem;
+    min-width: 250px;           /* Minimum width for each card */
+    text-align: center;
+}
+
+p{
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.service_card:hover, .review_card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    /* flex-grow: 1.05; Slightly enlarge the card */
 }
