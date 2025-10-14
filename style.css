@@ -1,0 +1,32 @@
+#navigation_bar {
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    gap: 2rem;               /* Space between links */
+    background: #f5f5f5;     /* Optional: add background */
+    padding: 1rem;           /* Optional: add padding */
+    border-radius: 8px;      /* Optional: rounded corners */
+}
+
+h1{
+    text-shadow: 2px 2px 4px pink;
+    color: rgb(90, 75, 100);
+}
+
+#navigation_bar a {
+       text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+#navigation_bar a:hover {
+    color: #a949dd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(white, rgb(221, 240, 247));
+    color: #333;
+}
