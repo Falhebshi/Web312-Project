@@ -185,3 +185,343 @@ p {
     width: 100px;
     height: auto;
 }
+
+/* Lama */
+/* General page style */
+body {
+  font-family: "Tahoma", sans-serif;
+  background-color: #fffdf9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Section title */
+.section_title {
+  font-size: 24px;
+  margin: 30px 0 20px;
+  color: #333;
+}
+
+/* Event cards container */
+.event_card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 70%;
+  margin: 15px auto;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for event cards */
+.event_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Event image style */
+.event_image {
+  width: 180px;
+  height: 120px;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+/* Event text details */
+.event_details {
+  padding: 15px;
+  text-align: right;
+}
+
+.event_details h3 {
+  margin: 5px 0;
+  color: #b07a28;
+}
+
+.event_details p {
+  margin: 3px 0;
+  font-size: 15px;
+}
+
+/* Buttons section (bottom of the page) */
+.dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+/* Button style */
+.dashboard-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* size */
+  width: 360px;            /* wider button */
+  padding: 20px 28px;      /* taller button */
+
+  /* text style */
+  font-size: 20px;         /* bigger text */
+  font-weight: bold;
+  letter-spacing: 0.5px;   /* adds a little spacing between letters */
+
+  /* border and colors */
+  border: 3px solid #b07a28;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #b07a28;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-btn:hover {
+  background-color: #b07a28;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Adjust icon and arrow inside */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+}
+
+.arrow {
+  font-size: 24px;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+  font-size: 16px;
+  margin: 25px 0;
+  text-align: right;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  color: #555;
+}
+
+.breadcrumb a {
+  color: #b07a28;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #333;
+}
+
+/* Footer container */
+.main-footer {
+  background-color: #fff;
+  border-top: 2px solid #b07a28;
+  padding: 30px 20px;
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Three columns inside footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: right;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Each column */
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.footer-column h3 {
+  color: #b07a28;
+  margin-bottom: 10px;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Bottom copyright line */
+copyright {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Request form section */
+.request-section {
+  width: 70%;
+  margin: 0 auto 60px;
+  text-align: right;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.request-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.request-form textarea {
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #b07a28;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #8c611f;
+}
+
+input[type="date"] {
+  direction: rtl;
+  text-align: right;
+  font-family: "Tahoma", sans-serif;
+}
+
+
+/* Calendar icon inside field */
+.calendar-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #b07a28;
+  cursor: pointer;
+}
+
+
+/* Evaluation form */
+.evaluation-section {
+  width: 70%;
+  margin: 0 auto 60px;
+  text-align: right;
+}
+
+.evaluation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.evaluation-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.evaluation-form select,
+.evaluation-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.evaluation-form textarea {
+  resize: none;
+}
+
+.rating span {
+  font-size: 28px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.rating span:hover,
+.rating span:hover ~ span {
+  color: gold;
+}
+
+.submit-btn {
+  background-color: #b07a28;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #8c611f;
+}
+
+/* Force star default color and behavior */
+.rating span {
+  font-size: 35px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rating span:hover {
+  transform: scale(1.2);
+}
+
+
+

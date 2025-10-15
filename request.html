@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tethkaar's customer request</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="images/logo.png" alt="Tethkar logo" class="logo" /></a>
+    </div>
+    <nav id="navigation_bar">
+      <a href="services.html">الخدمات</a> |
+      <a href="about.html">من نحن</a> |
+      <a href="customer.html">العميل</a> |
+      <a href="#">مزود الخدمة</a> |
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="index.html">الرئيسية</a> ›
+      <a href="customer.html">العميل</a> ›
+      <span>طلب فعالية</span>
+    </nav>
+
+    <section class="request-section">
+      <h2 class="section_title">طلب فعالية</h2>
+
+      <form class="request-form" action="#" method="post">
+        <label for="event">اختر الفعالية:</label>
+        <select id="event" name="event">
+          <option>فعالية القهوة السعودية</option>
+          <option>جولة في القرية التراثية</option>
+          <option>أمسية الشعر الشعبي</option>
+          <option>جولة في الواحة القديمة</option>
+        </select>
+
+        <label for="username">اسم المستخدم:</label>
+        <input type="text" id="username" name="username" placeholder="اكتب اسمك هنا...">
+
+        <label for="date">تاريخ الفعالية:</label>
+<input type="date" id="date" name="date" lang="ar" dir="rtl">
+<p id="arabicDate" style="margin-top:8px; font-weight:bold; color:#b07a28;">اليوم / الشهر / السنة</p>
+
+
+
+        <label for="description">وصف الطلب:</label>
+        <textarea id="description" name="description" placeholder="اكتب الوصف هنا..." rows="5"></textarea>
+
+        <button type="submit" class="submit-btn">إرسال</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>لوريم إيبسوم</h3>
+        <p>
+          هذا النص هو مثال نص يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النصوص العربي،
+          حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h3>تواصل معنا</h3>
+        <p>📞 هاتف: 966#######+</p>
+        <p>✉️ بريد إلكتروني: xxxxx@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h3>مواقع التواصل الاجتماعي</h3>
+        <div class="social-icons">
+          <img src="images/twitter.png" alt="Twitter">
+          <img src="images/instagram.png" alt="Instagram">
+          <img src="images/snapchat.png" alt="Snapchat">
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
+  </footer>
+
+
+<script>
+// Convert English digits to Arabic digits
+function toArabicNumbers(str) {
+  return str.replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
+}
+
+// Show Arabic date when user picks a date
+document.addEventListener("DOMContentLoaded", () => {
+  const dateInput = document.getElementById("date");
+  const arabicDate = document.getElementById("arabicDate");
+
+  dateInput.addEventListener("change", () => {
+    const dateValue = dateInput.value; // e.g. 2025-10-16
+    if (dateValue) {
+      const [year, month, day] = dateValue.split("-");
+      // Format it like: ١٦ / ١٠ / ٢٠٢٥
+      const formatted = `${toArabicNumbers(day)} / ${toArabicNumbers(month)} / ${toArabicNumbers(year)}`;
+      arabicDate.textContent = "التاريخ بالأرقام العربية: " + formatted;
+    } else {
+      arabicDate.textContent = "";
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tethkaar's customer evaluate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="images/logo.png" alt="Tethkar logo" class="logo" /></a>
+    </div>
+    <nav id="navigation_bar">
+      <a href="services.html">الخدمات</a> |
+      <a href="about.html">من نحن</a> |
+      <a href="customer.html">العميل</a> |
+      <a href="#">مزود الخدمة</a> |
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="index.html">الرئيسية</a> ›
+      <a href="customer.html">العميل</a> ›
+      <span>تقييم فعالية</span>
+    </nav>
+
+    <section class="evaluation-section">
+      <h2 class="section_title">تقييم فعالية</h2>
+
+      <form class="evaluation-form" action="#" method="post">
+        <label for="event">اختر الفعالية السابقة:</label>
+        <select id="event" name="event">
+          <option>فعالية القهوة السعودية</option>
+          <option>جولة في القرية التراثية</option>
+          <option>أمسية الشعر الشعبي</option>
+          <option>جولة في الواحة القديمة</option>
+        </select>
+
+        <label>التقييم:</label>
+        <div class="rating" id="starRating">
+  <span data-value="1">⚝</span>
+  <span data-value="2">⚝</span>
+  <span data-value="3">⚝</span>
+  <span data-value="4">⚝</span>
+  <span data-value="5">⚝</span>
+</div>
+<input type="hidden" id="ratingValue" name="ratingValue">
+
+
+
+        <label for="feedback">التعليقات والملاحظات:</label>
+        <textarea id="feedback" name="feedback" placeholder="اكتب تعليقك هنا..." rows="5"></textarea>
+
+        <button type="submit" class="submit-btn">إرسال</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>لوريم إيبسوم</h3>
+        <p>
+          هذا النص هو مثال نص يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النصوص العربي،
+          حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h3>تواصل معنا</h3>
+        <p>📞 هاتف: 966#######+</p>
+        <p>✉️ بريد إلكتروني: xxxxx@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h3>مواقع التواصل الاجتماعي</h3>
+        <div class="social-icons">
+          <img src="images/twitter.png" alt="Twitter">
+          <img src="images/instagram.png" alt="Instagram">
+          <img src="images/snapchat.png" alt="Snapchat">
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
+  </footer>
+
+<script>
+const stars = document.querySelectorAll('#starRating span');
+const ratingValue = document.getElementById('ratingValue');
+
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    const value = parseInt(star.getAttribute('data-value'));
+    ratingValue.value = value;
+
+    // عند الضغط نبدل الرموز
+    stars.forEach((s, index) => {
+      if (index < value) {
+        s.textContent = '⭐'; // تعبئة
+      } else {
+        s.textContent = '⚝'; // فارغة
+      }
+    });
+  });
+
+  // تأثير مؤقت عند المرور بالماوس (اختياري)
+  star.addEventListener('mouseover', () => {
+    const hoverValue = parseInt(star.getAttribute('data-value'));
+    stars.forEach((s, index) => {
+      s.textContent = index < hoverValue ? '⭐' : '⚝';
+    });
+  });
+
+  // يرجع للوضع اللي اختاره المستخدم
+  star.addEventListener('mouseleave', () => {
+    const currentValue = parseInt(ratingValue.value) || 0;
+    stars.forEach((s, index) => {
+      s.textContent = index < currentValue ? '⭐' : '⚝';
+    });
+  });
+});
+</script>
+
+
+
+</body>
+</html>
