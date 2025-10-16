@@ -11,9 +11,16 @@ header {
     /* Subtle shadow */
     border-radius: 10px;
     /* Optional: rounded corners */
+    float: center;
 }
 
-#navigation_bar {
+main{
+  border: 2px solid #000000;
+  border-radius: 1em;
+  margin: 1em 0em 1em 0em;
+}
+
+.navigation_bar {
     align-self: center;
     flex-wrap: wrap;
     display: flex;
@@ -35,7 +42,7 @@ header {
     /* Optional: subtle shadow */
 }
 
-#navigation_bar div a {
+.navigation_bar div a {
     display: block;
     text-decoration: none;
     color: #333;
@@ -45,7 +52,7 @@ header {
 
 }
 
-#navigation_bar div :hover {
+.navigation_bar div :hover {
     background-color: #d7eaf7;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
@@ -54,14 +61,10 @@ header {
 
 
 
-#navigation_bar a:hover {
+.navigation_bar a:hover {
     color: #000000;
     text-decoration: underline;
 }
-
-
-
-
 
 .brand .logo {
     height: 60px;
@@ -71,28 +74,20 @@ header {
     margin-right: 0.6rem;
     /* Space between logo and text */
     margin-left: 2em;
-    ;
+    float: top;
 }
 
 /* -----BODY----- */
 
 body {
     font-family: Arial, sans-serif;
-    margin: 1em 1em 5em 1em;
+    margin: 0em 1em 0em 1em;
     padding: 0;
     background-image: radial-gradient(white, rgb(201, 231, 243));
     color: #333;
 }
 
-
-
-
-
-
-.brand {
-    margin-inline-start: 0;
-}
-
+/*  frontpage */
 #frontpage {
     display: block;
     margin-top: 40px;
@@ -119,6 +114,7 @@ body {
     color: #555;
 }
 
+/* Services and Reviews Sections */
 .sections {
     display: flex;
     justify-content: space-around;
@@ -127,12 +123,12 @@ body {
     margin-top: 40px;
 }
 
-.section_title {
+h2.section_title {
     width: 100%;
     font-size: 1.8em;
     color: #333;
     margin-bottom: 20px;
-    margin-right: 50px;
+    margin-right: 1.5em;
 }
 
 .service_card,
@@ -186,16 +182,25 @@ p {
     height: auto;
 }
 
+.gallery_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
 /* Lama */
 /* General page style */
-body {
+/* body {
   font-family: "Tahoma", sans-serif;
   background-color: #fffdf9;
   color: #333;
   margin: 0;
   padding: 0;
   text-align: center;
-}
+} */
 
 /* Section title */
 .section_title {
