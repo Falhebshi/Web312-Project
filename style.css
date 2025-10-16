@@ -52,7 +52,7 @@ main{
 
 }
 
-.navigation_bar div :hover {
+.navigation_bar div:hover {
     background-color: #d7eaf7;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
