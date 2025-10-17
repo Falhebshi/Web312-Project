@@ -788,32 +788,3 @@ hr {
   margin-right: 4px;
   vertical-align: middle;
 }
-
-
-/*#favorite-events {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-#favorite-events .event_card {
-  background-color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  padding: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-#favorite-events .event_image {
-  width: 90%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}*/
-
-
-
-
