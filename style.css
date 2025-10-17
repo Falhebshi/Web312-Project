@@ -15,6 +15,7 @@ body,html {
 }*/
 
 
+
 @media screen and (max-width: 480px) {
   body{
     margin: 0;
@@ -45,6 +46,15 @@ header {
     background-color: #96bbd4;
     /* border-radius: 10px; */
     /* Optional: rounded corners */
+}
+
+.main_heading {
+    margin: 25px 0;
+  text-align: right;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  color: #555;
 }
 
 .navigation_bar {
@@ -130,6 +140,7 @@ main{
 /*-----FOOTER-----*/
 /* Footer container */
 .main-footer {
+  margin: 0;
   background-color: #fff;
   border-top: 2px solid #b07a28;
   padding: 30px 20px;
@@ -218,9 +229,9 @@ copyright {
 /* Services and Reviews Sections */
 .sections {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1em;
     margin-top: 40px;
     min-width: 500px;
     max-width: 1200px;
@@ -286,8 +297,22 @@ p { /*any paragraph*/
 }
 
 .reviewer_name::before{
-    content: url(); /*image url*/
-    /* display: inline-block; */
+    content: url(images/person-circle.svg); /*image url*/
+    display: inline-block; 
+    padding-left: 0.5em;
+}
+
+.location::before{
+    content: url(images/geo-alt-fill.svg); /*image url*/
+    display: inline-block; 
+    padding-left: 0.3em;
+}
+
+.reviewer_service {
+    font-weight: bold;
+    color: #777;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em;
 }
 
 .star_rating {
@@ -315,7 +340,79 @@ p { /*any paragraph*/
     /* transition: transform 0.3s ease; */
 }
 
+/*-----SERVICES PAGE-----*/
+#services_page_heading {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+}
+.services-container {
+    max-width: 1200px;
+    margin: 2em auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2em;
+    padding: 0 1em;
+    justify-content: center;
+}
 
+#sort{
+    font-size: 16px;
+  margin: 25px 0;
+  text-align: right;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  color: #555;
+}
+
+select [name="sort_list"] {
+    font-size: 16px;
+    margin-right: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+optgroup[label="السعر"],
+optgroup[label="الاسم"] {
+    font-weight: bolder;
+    font-style: italic;
+    color: #b07a28;
+}
+
+#sort option {
+    padding: 5px;
+    color: #333;
+}
+
+.services-container .location {
+    margin-top: 0.5em;
+    color: #777;
+    font-weight: bold;
+    text-align: right;
+}
+
+.services-container .price {
+    margin-top: 0.5em;
+    color: #b07a28;
+    font-weight: bold;
+    text-align: right;
+    float: left;
+}
+
+.loc-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price::after{
+  content: url(images/Saudi_Riyal_Symbol_16x18.png);
+  height: 12px;
+  width: auto;
+}
 /* Lama */
 /* General page style */
 /* body {
