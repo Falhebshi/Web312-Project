@@ -446,7 +446,7 @@ optgroup[label="الاسم"] {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: 70%;
+  width: 55%;
   margin: 15px auto;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -701,6 +701,119 @@ input[type="date"] {
 .rating span:hover {
   transform: scale(1.2);
 }
+
+.main_heading {
+  text-align: center; 
+  font-size: 28px;
+  font-weight: bold;
+  color: #555; 
+  margin: 40px auto 25px auto;
+}
+
+hr {
+  width: 80%;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px auto;
+}
+#favorite-events {
+  margin-bottom: 40px;
+}
+
+.main_heading {
+  text-align: center; 
+  color: #333;  
+  font-size: 2em; 
+  margin: 40px auto 25px auto;
+}
+
+/* ===== Favorite Events Section ===== */
+#favorite-events {
+  max-width: 1200px;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+#favorite-events .event_card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  padding: 1.5rem;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#favorite-events .event_card:hover {
+  transform: translateY(-5px);
+}
+
+#favorite-events .event_image {
+  width: 40%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+#favorite-events .event_title {
+  font-size: 1.2rem;
+  color: #b07a28;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+#favorite-events .price {
+  color: #b07a28;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#favorite-events .price::after {
+  content: "";
+  display: inline-block;
+  background-image: url("images/riyal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+
+/*#favorite-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#favorite-events .event_card {
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+#favorite-events .event_image {
+  width: 90%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}*/
+
 
 
 
