@@ -409,9 +409,19 @@ optgroup[label="الاسم"] {
 }
 
 .price::after{
-  content: url(images/Saudi_Riyal_Symbol_16x18.png);
+  content: "";
+  display: inline-block;
+  background-image: url("images/riyal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px; /* 👈 تحكم بالحجم من هنا */
+  width: 12px;
   height: 12px;
-  width: auto;
+  margin-right: 4px;
+  vertical-align: middle;
+  /*content: url(images/Saudi_Riyal_Symbol_16x18.png);
+  height: 12px;
+  width: auto;*/
 }
 /* Lama */
 /* General page style */
