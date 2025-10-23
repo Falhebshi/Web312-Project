@@ -677,7 +677,17 @@ input[type="date"] {
   resize: none;
 }
 
-.rating span {
+.rating img.star {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rating img.star:hover {
+  transform: scale(1.2);
+}
+
+/*.rating span {
   font-size: 28px;
   cursor: pointer;
   color: #ccc;
@@ -687,7 +697,7 @@ input[type="date"] {
 .rating span:hover,
 .rating span:hover~span {
   color: gold;
-}
+}*/
 
 .submit-btn {
   background-color: #b07a28;
