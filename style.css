@@ -240,14 +240,14 @@ copyright {
   margin-right: auto;
 }
 
-h2.section_title {
-  /*section titles*/
+ /*section titles*/
+/* h2.section_title {
   width: 100%;
   font-size: 1.8em;
   color: #333;
   margin-bottom: 0.6em;
   margin-right: 1.5em;
-}
+} */
 
 .service_card,
 .review_card {
