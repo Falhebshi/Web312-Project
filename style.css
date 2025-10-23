@@ -142,23 +142,38 @@ nav .brand {
   margin-bottom: 10px;
 }
 
-/* Social icons */
-.social-icons {
+/* Social & contact icons  */
+.social-icons,
+.contact-icons {
   display: flex;
   gap: 20px;
   justify-content: flex-start;
   margin-top: 10px;
 }
 
-.social-icons img {
+.social-icons img,
+.contact-icons img {
   width: 35px;
   height: 35px;
   /* border-radius: 50; */
   transition: transform 0.3s ease;
 }
 
-.social-icons img:hover {
+.social-icons img:hover,
+.contact-icons img:hover {
   transform: scale(1.1);
+}
+
+.social-icons {
+  flex-wrap: wrap;
+}
+
+.social-icons p {
+  width: 100%;
+  text-align: right; 
+  margin-top: 4px; 
+  margin-bottom: 0;
+  padding-right: 40px;
 }
 
 /* Bottom copyright line */
