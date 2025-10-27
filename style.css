@@ -233,21 +233,17 @@ copyright {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1em;
-  margin-top: 40px;
-  min-width: 500px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px;
 }
 
  /*section titles*/
-/* h2.section_title {
+h2.section_title {
   width: 100%;
   font-size: 1.8em;
   color: #333;
   margin-bottom: 0.6em;
   margin-right: 1.5em;
-} */
+} 
 
 .service_card,
 .review_card {
@@ -255,9 +251,11 @@ copyright {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
   padding: 1.5rem;
-  min-width: 250px;
-  /* Minimum width for each card */
+  width: 250px;
   text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .service_image {
@@ -267,6 +265,42 @@ copyright {
   margin-bottom: 0.5rem;
   border-radius: 10px;
 }
+
+.service_card .service_description, .service-hover-info p{
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.service-hover-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #6b81a1d0;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;                 /* hidden by default */
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.service-hover-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.service_card:hover .service-hover-info {
+  opacity: 1; /* visible when hovered */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 .reviewer_name {
   font-weight: bold;
@@ -284,20 +318,19 @@ p {
 .review_card:hover {
   transform: translateY(-5px);
   transition: all 0.3s ease;
-  /* flex-grow: 1.05; Slightly enlarge the card */
 }
 
 
 .review_header {
   display: flex;
-  align-items: right;
-  justify-content: space-between;
-  gap: 5rem;
-  /* space between name and image */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .reviewer_name {
   margin: 0;
+  flex-grow: 3;
 }
 
 .reviewer_name::before {
@@ -317,7 +350,7 @@ p {
 .reviewer_service {
   font-weight: bold;
   color: #777;
-  margin-top: 0.3em;
+  padding-top: 0.4em;
   margin-bottom: 0.8em;
 }
 
@@ -346,6 +379,13 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
   /* transition: transform 0.3s ease; */
 }
+
+.gallery_grid img:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+
 
 /*-----SERVICES PAGE-----*/
 #services_page_heading {
