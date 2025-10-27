@@ -394,6 +394,14 @@ p {
   font-size: 2em;
 }
 
+.service_description-services {
+  font-size: 16px;
+  color: #555;
+  margin-top: 0.5em;
+  text-align: center;
+  overflow: hidden;
+}
+
 .services-container {
   max-width: 1200px;
   margin: 2em auto;
