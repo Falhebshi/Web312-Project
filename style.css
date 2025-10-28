@@ -886,3 +886,35 @@ hr {
   color: #333;
   margin-top: 2em;
 }
+form{
+  width :80%;
+}
+input[type='text'], input[type='tel'],input[type='email'],input[type='date'], textarea, select{
+  
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+
+}
+input[type="submit"]{
+  border : none ;
+  color:white;
+  background-color: #b07a28;
+  width: 10%;
+  height: 5%;
+  
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+ 
+}
+
+
+
