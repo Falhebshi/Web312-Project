@@ -869,4 +869,20 @@ hr {
   vertical-align: middle;
 }
 
-.st
+.team-container{
+  display: flex;
+  justify-content: space-around;
+  overflow-x: auto;
+
+}
+
+.team-member{
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.h2about-us{
+  text-align: center;
+  color: #333;
+  margin-top: 2em;
+}
