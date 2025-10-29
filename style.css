@@ -25,8 +25,8 @@ header {
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  border-radius: 10px;
-
+  /*border-radius: 10px;*/
+  border-radius: 0 0 10px 10px;
   position: fixed;      /* يثبت الهيدر في الأعلى */
   top: 0;               /* يضعه في أعلى الصفحة */
   left: 0;               /* يبعده قليلاً عن الحافة اليسرى */
@@ -116,14 +116,16 @@ nav .brand {
 /*-----FOOTER-----*/
 /* Footer container */
 .main-footer {
-  margin: 0 30px 30px 30px;
+  /*margin: 0 30px 30px 30px;*/
+  margin: 0;
   background-color: #fff;
   /* border-top: 2px solid #b07a28; */
   padding: 30px 20px;
   color: #333;
   font-size: 15px;
   text-align: center;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
+  width: 100%;
 }
 
 /* Three columns inside footer */
@@ -887,7 +889,8 @@ hr {
   color: #333;
   margin-top: 2em;
 }
-form{
+/* يحتاج تعديل */
+form#f{
   width :80%;
   background-color: #fff;
   border-radius: 10px;
