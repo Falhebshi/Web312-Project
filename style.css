@@ -1041,4 +1041,46 @@ td ul li ul li {
   font-weight: normal;
 }
 
+.staff-list {
+  display: flex;
+  flex-direction: column; /* stack staff items vertically */
+  gap: 15px; /* space between each staff member */
+  align-items: flex-start; /* align items to the right edge for Arabic */
+  margin-bottom: 20px;
+}
+
+.staff-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px; /* space between checkbox, image, and name */
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: fit-content;
+  direction: rtl; /* makes checkbox appear on the right for Arabic */
+  cursor: pointer;
+}
+
+.staff-item img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8b5cf6;
+}
+
+.staff-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #8b5cf6;
+  cursor: pointer;
+}
+
+.staff-item span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
 
