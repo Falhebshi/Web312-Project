@@ -1085,3 +1085,12 @@ td ul li ul li {
   color: #333;
 }
 
+
+/* الخلفية الفاتحة للقسم */
+.services-section {
+  background-color: #fdf6ff; /* لون بيج فاتح */
+  padding: 10px 0; /* مسافة فوق وتحت */
+  text-align: center;
+  margin: 90px 180px;
+  border-radius: 40px; 
+}
