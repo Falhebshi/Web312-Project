@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tethkaar's manage member</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header> <!--header: nav-bar+logo-->
+        <div class="brand">
+            <a href="index.html"><img src="images/logo.png" alt="Tethkar logo" class="logo" /></a>
+        </div>
+          
+        <nav class="navigation_bar">
+             <ul>
+            <li><div class="link"><a href="services.html" class="nav_item">الخدمات</a></div></li>
+            <li><div class="link"><a href="customer.html" class="nav_item">العميل</a></div></li>
+            <li><div class="link"><a href="manager.html" class="nav_item">مزود الخدمة</a></div></li>
+            <li><div class="link"><a href="about-us.html" class="nav_item">من نحن</a></div></li>
+            </ul>
+        </nav>
+    </header>
+    <label for="nav-toggle" class="backdrop" aria-hidden="true"></label>
+
+<main>
+    <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="index.html">الرئيسية</a> ›
+    <a href="manager.html">مقدمة الخدمة</a> ›
+    <span>إدارة أعضاء الفريق</span>
+  </nav><hr>
+
+    <!-- Delete Staff Section -->
+    <section class="request-section">
+
+      <h2>أعضاء فريق العمل المتاحين</h2>
+    <form class="request-form" action="#" method="post" enctype="multipart/form-data">
+        <div class="staff-list">
+
+          <label class="staff-item">
+            <input type="checkbox" name="staff" value="fatimah">
+            <img src="images/staff1.jpg" alt="فاطمة الحبشي">
+            <span>فاطمة الحبشي</span>
+          </label><br>
+
+          <label class="staff-item">
+            <input type="checkbox" name="staff" value="haya">
+            <img src="images/staff2.jpg" alt="هيا الهاجري">
+            <span>هيا الهاجري</span>
+          </label><br>
+
+          <label class="staff-item">
+            <input type="checkbox" name="staff" value="lama">
+            <img src="images/staff3.jpg" alt="لمى المبارك">
+            <span>لمى المبارك</span>
+          </label><br>
+
+        </div>
+
+        <button type="submit" class="submit-btn">حذف الأعضاء المحددين</button>
+      </form>
+    </section>
+
+    <!-- Add New Staff Member Section -->
+    <section class="request-section">
+      <h2>إضافة عضو جديد</h2>
+
+    <form class="request-form" action="#" method="post" enctype="multipart/form-data">
+        <label for="name">الاسم الكامل:</label>
+        <input type="text" id="name" name="name" placeholder="اكتب الاسم الكامل..." required>
+
+        <label for="dob">تاريخ الميلاد:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+        <label for="expertise">مجال الخبرة:</label>
+        <textarea id="expertise" name="expertise" placeholder="اكتب مجال الخبرة..." rows="3" required></textarea>
+
+        <label for="skills">المهارات:</label>
+        <textarea id="skills" name="skills" placeholder="اكتب المهارات..." rows="3" required></textarea>
+
+        <label for="education">المؤهل العلمي:</label>
+        <textarea id="education" name="education" placeholder="اكتب المؤهل العلمي..." rows="3" required></textarea>
+
+        
+        <label for="photo">الصورة الشخصية:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+
+
+        <button type="submit" class="submit-btn">إضافة العضو</button>
+      </form>
+    </section>
+
+
+
+
+    
+  </main>
+  
+      <!-- Footer -->
+      <footer class="main-footer">
+         <div class="footer-container">
+
+           <!-- Right: About section -->
+            <div class="footer-column">
+           <h3>لوريم إيبسوم</h3>
+            <p>
+            هذا النص هو مثال نص يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النصوص العربي،
+            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف.
+            </p>
+           </div>
+
+    <!-- Middle: Contact info -->
+    <div class="footer-column">
+      <h3>تواصل معنا</h3>
+      <div class="contact-info">
+    <div class="contact-icons"> 
+      <img src="images/telephone.svg" alt="Phone" class="icon">
+      <p>#######966+</p>
+    </div>
+    <div class="contact-icons">
+        <img src="images/email.svg" alt="Email" class="icon">
+      <p>xxxxx@gmail.com</p>
+    </div>
+  </div>
+  </div>
+  
+    <!-- Left: Social media icons -->
+    <div class="footer-column">
+      <h3>مواقع التواصل الاجتماعي</h3>
+      <div class="social-icons">
+        <img src="images/twitter-x.svg" alt="Twitter">
+        <img src="images/instagram.svg" alt="Instagram">
+        <img src="images/snapchat.svg" alt="Snapchat">
+        <p>Tethkar@</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
+ </footer>
+
+
+</body>
+</html>
