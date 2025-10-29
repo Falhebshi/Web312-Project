@@ -29,8 +29,8 @@
 <!-- Breadcrumb -->
   <nav class="breadcrumb">
     <a href="index.html">الرئيسية</a> ›
-    <a href="manager.html">مقدمة الخدمة</a> ›
-    <span>إضافة خدمة</span>
+    <a href="manager.html">مزود الخدمة</a> ›
+    <span>إضافة خدمة جديدة</span>
   </nav><hr>
 
   <!-- Add Service Section -->
@@ -47,9 +47,12 @@
       <label for="service-description">وصف الخدمة</label>
       <textarea id="service-description" name="service-description" placeholder="اكتب وصف الخدمة هنا..." rows="5" required></textarea>
 
-      
-      <label for="service-price">السعر (ريال)</label>
-      <input type="number" id="service-price" name="service-price" placeholder="اكتب سعر الخدمة..." min="0" required>
+
+<label for="service-price">السعر</label>
+<div class="price">
+  <input type="number" id="service-price" name="service-price"
+         placeholder="اكتب سعر الخدمة..." min="0" required>
+</div>
 
 
       <label for="service-photo">صورة الخدمة</label>
