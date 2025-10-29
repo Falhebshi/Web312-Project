@@ -511,15 +511,24 @@ optgroup[label="الاسم"] {
 } */
 
 /* Event cards container */
+#previous-events {
+  display: flex;
+  flex-wrap: wrap;          /* يخلي الكروت تنزل سطر جديد إذا ما فيه مساحة */
+  justify-content: center;  /* يوسّط الصف */
+  gap: 2px;             /* يضيف مسافة بين الكروت */
+  padding: 20px 0;
+}
+
 .event_card {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: 55%;
+  width: 30%;
   margin: 15px auto;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+   min-height: 150px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -530,10 +539,14 @@ optgroup[label="الاسم"] {
 
 /* Event image style */
 .event_image {
+  margin: 0.5rem;
+  object-fit: cover;
   width: 180px;
   height: 120px;
-  border-radius: 10px 0 0 10px;
+  /*border-radius: 10px 0 0 10px;*/
+  border-radius: 10px;
   object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Event text details */
@@ -555,8 +568,9 @@ optgroup[label="الاسم"] {
 /* Buttons section (bottom of the page) */
 .dashboard-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   margin: 40px 0;
 }
@@ -653,7 +667,7 @@ optgroup[label="الاسم"] {
 .request-form label {
   font-weight: bold;
   color: #333;
-  text-align: center;
+  text-align: right;
 }
 
 .request-form input,
@@ -793,7 +807,7 @@ input[type="date"] {
   margin: 40px auto 25px auto;
 }
 
-hr {
+hr#section {
   width: 80%;
   border: none;
   height: 1px;
@@ -989,10 +1003,6 @@ table {
   padding-right: 120px; 
 }
 
-
-
-
-
 thead th {
   background-color: #f8f9fa;
   color: #333;
@@ -1092,5 +1102,13 @@ td ul li ul li {
   padding: 10px 0; /* مسافة فوق وتحت */
   text-align: center;
   margin: 90px 180px;
+  border-radius: 40px; 
+}
+
+.services-section {
+  background-color: #fdf6ff;
+  padding: 10px 0; /* مسافة فوق وتحت */
+  text-align: center;
+  margin: 190px 180px 80px 180px; /* مسافة من الجوانب */
   border-radius: 40px; 
 }
