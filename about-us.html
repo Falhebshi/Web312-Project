@@ -48,63 +48,43 @@
             <a href="lama.html">لمى المبارك</a>
         </div>
         </div>
-
-        <!--the joining form-->
-        <h2 class="h2about-us">انضم إلينا</h2>
-        <div class="form">
-        <form action="" method="post" enctype="multipart/form-data">
-            <!--name-->
-            <div class="form-cont">
-            <label>الاسم<br>
-            <input type="text" name="name" required></label></div>
-          
-            <div class="form-cont">
-            <!--date of birth-->
-            <label>تاريخ الميلاد <br>
-            <input type="date" name="date" required></label></div>
-         
-            <div class="form-cont">
-            <!--email-->
-            <label>البريد الإلكتروني<br>
-            <input type="email" name="email" required></label></div>
         
-            <div class="form-cont">
-            <!--area of expertise-->
-            <label>مجال الخبرة<br>
-            <textarea name="experties" rows="5">اكتب مجال الخبرة</textarea></label></div>
+          <!-- Add Service Section -->
+  <section class="request-section">
+    <h2 class="section_title">انضم إلينا</h2>
+
+    <form class="request-form" action="#" method="post" enctype="multipart/form-data">
       
-            <div class="form-cont">
-            <!--skills-->
-            <label>المهارات <br>
-            <textarea name="skills" rows="5">اكتب مهاراتك</textarea></label></div>
-           
-            <div class="form-cont">
-            <!--education-->
-            <label>التعليم<br>
-            <textarea name="education" rows="5">اكتب عن تعليمك</textarea></label></div>
-           
-            <div class="form-cont">
-            <!--message-->
-            <label>الرسالة<br>
-            <textarea name="message" rows="5">رسالتك</textarea></label></div>
-            
-            <div class="form-cont">
-            <!--photo--> 
-            <label>صورة العضو<br>
-            <input type="file" name="photo"></label></div>
-            
-            <div class="form-cont">
-            <!--submit-->
-            <input type="submit" value="انضم إلينا"></div>
-        
+      <label for="member-name">الاسم</label>
+      <input type="text" id="member-name" name="member-name" placeholder="اكتب الاسم هنا..." required>
+
+       <label for="member-email">البريد الإلكتروني</label>
+      <input type="email" id="member-email" name="email" placeholder="اكتب البريد الإلكتروني هنا..." required>
+
+      <label for="date-birth">تاريخ الميلاد</label>
+      <input type="date" id="date-birth" name="date" required>
+
+      <label for="experties-member">مجال الخبرة</label>
+      <textarea id="experties-member" name="experties" placeholder="اكتب مجال الخبرة هنا..." rows="5" required></textarea>
+
+      <label for="skills-member">المهارات</label>
+      <textarea id="skills-member" name="experties" placeholder="اكتب مهاراتك هنا..." rows="5" required></textarea>
+
+      <label for="education-member">التعليم</label>
+      <textarea id="education-member" name="education" placeholder="اكتب عن تعليمك هنا..." rows="5" required></textarea>
+
+      <label for="experties-member">الرسالة</label>
+      <textarea id="experties-member" name="experties" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
+      
+      
 
 
+      <label for="service-photo">صورة العضو</label>
+      <input type="file" id="service-photo" name="service-photo" accept="image/*" required>
 
-        </form>
-        </div>
-
-
-
+      <button type="submit" class="submit-btn">انضم إلينا</button>
+    </form>
+  </section>
     </main>
 
 

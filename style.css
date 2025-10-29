@@ -653,6 +653,7 @@ optgroup[label="الاسم"] {
 .request-form label {
   font-weight: bold;
   color: #333;
+  text-align: center;
 }
 
 .request-form input,
@@ -890,7 +891,7 @@ hr {
   color: #333;
   margin-top: 2em;
 }
-/* يحتاج تعديل */
+/* يحتاج تعديل 
 form#f{
   width :80%;
   background-color: #fff;
@@ -899,7 +900,7 @@ form#f{
   padding: 30px 40px;
   max-width: 600px;
   display: flex;
-  flex-direction: column;      /* vertical stack */
+  flex-direction: column;      
   gap: 18px;
   line-height: 30px;
 }
@@ -945,7 +946,7 @@ input[type="file"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 14px; }
+  font-size: 14px; } */
 
 table {
   width: 85%;
