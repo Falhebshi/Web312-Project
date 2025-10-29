@@ -33,6 +33,7 @@ header {
   width: 100%;          /* يغطي عرض الشاشة */
   background-color: #ffffff; /* تأكد من وجود خلفية حتى لا يكون شفاف */
   z-index: 1;        /* حتى يكون فوق باقي العناصر */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.113);
 
 }
 
