@@ -11,7 +11,10 @@ body {
   margin-top: 120px; /* أو حسب ارتفاع الهيدر عندك */
   font-family: "Arial", sans-serif;
   padding: 0;
-  background-image: radial-gradient(white, rgb(201, 231, 243));
+  background-image:radial-gradient(rgb(255, 255, 255), rgb(240, 237, 237));/*radial-gradient(white, rgb(201, 231, 243)); radial-gradient(white, rgb(240, 237, 237))*/
+   background-repeat: no-repeat;
+   background-size: cover;
+  background-attachment: fixed;
   color: #333;
 }
 
@@ -31,7 +34,10 @@ header {
   top: 0;               /* يضعه في أعلى الصفحة */
   left: 0;               /* يبعده قليلاً عن الحافة اليسرى */
   width: 100%;          /* يغطي عرض الشاشة */
-  background-color: #ffffff; /* تأكد من وجود خلفية حتى لا يكون شفاف */
+  /*background-color: #ffffff; /* تأكد من وجود خلفية حتى لا يكون شفاف */
+  /*background-color: #F9F6F2;*/
+   background-color: #F3EFEA;
+   color: #333;
   z-index: 1;        /* حتى يكون فوق باقي العناصر */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.113);
 
@@ -39,11 +45,11 @@ header {
 
 .main_heading {
   margin: 25px 0;
-  text-align: right;
+  text-align: center;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
-  color: #555;
+  color: #333;
 }
 
 .navigation_bar {
@@ -94,7 +100,7 @@ nav .brand {
 }
 
 .navigation_bar div:hover {
-  background-color: #d9ebf462;
+  background-color:#f4e8d962; /*#d9ebf462;*/
   border-radius: 1em;
 }
 
@@ -119,10 +125,13 @@ nav .brand {
 .main-footer {
   /*margin: 0 30px 30px 30px;*/
   margin: 0;
-  background-color: #fff;
-  /* border-top: 2px solid #b07a28; */
-  padding: 30px 20px;
+  /*background-color: #fff;*/
+   background-color: #f4ece4;
+  /* border-top: 2px solid #b07a28; 
+  padding: 30px 20px;*/
   color: #333;
+  border-top: 3px solid #f4ece4;
+  padding: 20px;
   font-size: 15px;
   text-align: center;
   /*border-radius: 10px;*/
@@ -146,10 +155,11 @@ nav .brand {
   flex: 1;
   min-width: 250px;
   padding: 10px;
+  text-align: center;
 }
 
 .footer-column h3 {
-  color: #b07a28;
+  color: #a16f24;
   margin-bottom: 10px;
 }
 
@@ -158,7 +168,7 @@ nav .brand {
 .contact-icons {
   display: flex;
   gap: 20px;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 10px;
 }
 
@@ -181,7 +191,7 @@ nav .brand {
 
 .social-icons p {
   width: 100%;
-  text-align: right; 
+  text-align: center; 
   margin-top: 4px; 
   margin-bottom: 0;
   padding-right: 40px;
@@ -825,14 +835,14 @@ input[type="date"] {
 .rating span:hover {
   transform: scale(1.2);
 }
-
+/*
 .main_heading {
   text-align: center;
   font-size: 28px;
   font-weight: bold;
   color: #555;
   margin: 40px auto 25px auto;
-}
+}*/
 
 hr#section {
   width: 80%;
@@ -1274,3 +1284,25 @@ td ul li ul li {
 .fav-btn.active .heart::after {
   background-color: #e63946;
 }*/
+/* ---- Share Button ---- */
+.share-btn-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.share-btn {
+  display: inline-block;
+  background-color: #b68d40; /* لون ذهبي جميل */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  background-color: #8b6a2b; /* لون أغمق عند التمرير */
+  transform: scale(1.05);
+}
