@@ -1139,10 +1139,10 @@ td ul li ul li {
 }
 
 
-/* الخلفية الفاتحة للقسم */
+/* الخلفية الفاتحة للقسم 
 .services-section {
-  background-color: #fdf6ff; /* لون بيج فاتح */
-  padding: 10px 0; /* مسافة فوق وتحت */
+  background-color: #fdf6ff; 
+  padding: 10px 0; 
   text-align: center;
   margin: 90px 180px;
   border-radius: 40px; 
@@ -1150,11 +1150,11 @@ td ul li ul li {
 
 .services-section {
   background-color: #fdf6ff;
-  padding: 10px 0; /* مسافة فوق وتحت */
+  padding: 10px 0; 
   text-align: center;
-  margin:80px 180px; /* مسافة من الجوانب */
+  margin:80px 180px; 
   border-radius: 40px; 
-}
+}*/
 
 /* fav button*/
 .fav-btn {
