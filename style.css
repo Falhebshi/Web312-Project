@@ -461,12 +461,16 @@ optgroup[label="الاسم"] {
   text-align: right;
 }
 
-.services-container .price {
+.services-container .price{
   margin-top: 0.5em;
   color: #b07a28;
   font-weight: bold;
   text-align: right;
   float: left;
+}
+p span.price {
+  text-align: center;
+  color: #b07a28;
 }
 
 .loc-price-container {
@@ -513,6 +517,7 @@ optgroup[label="الاسم"] {
 /* Event cards container */
 #previous-events {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;          /* يخلي الكروت تنزل سطر جديد إذا ما فيه مساحة */
   justify-content: center;  /* يوسّط الصف */
   gap: 2px;             /* يضيف مسافة بين الكروت */
@@ -520,6 +525,23 @@ optgroup[label="الاسم"] {
 }
 
 .event_card {
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%;
+  flex-wrap: wrap;
+  min-width: 230px;
+  margin: 15px auto;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+   min-height: 150px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* ضروري لتثبيت موقع القلب داخل البطاقة */
+}
+.favorite_card {
   flex-direction: column;
   justify-content: center;
   background-color: #ffffff;
@@ -533,19 +555,21 @@ optgroup[label="الاسم"] {
   align-items: center;
    min-height: 150px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* ضروري لتثبيت موقع القلب داخل البطاقة */
 }
 
 /* Hover effect for event cards */
-.event_card:hover {
+.event_card:hover,
+.favorite_card:hover {
   transform: translateY(-2px);
 }
 
 /* Event image style */
 .event_image {
-  margin: 0.5rem;
+  margin: 1rem;
   object-fit: cover;
   width: 180px;
-  height: 120px;
+  height: 140px;
   /*border-radius: 10px 0 0 10px;*/
   border-radius: 10px;
   object-fit: cover;
@@ -555,7 +579,7 @@ optgroup[label="الاسم"] {
 /* Event text details */
 .event_details {
   padding: 15px;
-  text-align: right;
+  text-align: center;
 }
 
 .event_details h3 {
@@ -817,7 +841,13 @@ hr#section {
   background-color: #ccc;
   margin: 40px auto;
 }
-
+#favorite-events {
+  display: flex;
+  flex-wrap: wrap;     /* يخلي الكروت تنزل سطر جديد إذا المساحة ما تكفي */
+  justify-content: center;
+  gap: 20px;           /* مسافة بين الكروت */
+}
+/*
 #favorite-events {
   margin-bottom: 40px;
 }
@@ -830,7 +860,7 @@ hr#section {
 }
 
 /* ===== Favorite Events Section ===== */
-#favorite-events {
+/*#favorite-events {
   max-width: 1200px;
   margin: 2em auto;
   display: flex;
@@ -888,7 +918,7 @@ hr#section {
   height: 12px;
   margin-right: 4px;
   vertical-align: middle;
-}
+}*/
 
 .team-container{
   display: flex;
@@ -1115,81 +1145,132 @@ td ul li ul li {
   margin:80px 180px; /* مسافة من الجوانب */
   border-radius: 40px; 
 }
-/*
-.event_card {
-  position: relative; /* لتحديد موضع الزر داخل البطاقة */
- /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
 
-.event_card:hover {
-  transform: translateY(-5px);
-}
-
-/* الزر في الزاوية العلوية اليمنى */
-/*.event_card .fav-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+/* fav button*/
+.fav-btn {
   background: none;
   border: none;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #fff;
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.event_card .fav-btn:hover {
+.fav-btn:hover {
   transform: scale(1.1);
 }
 
 /* شكل القلب */
-/*.heart {
-  width: 20px;
-  height: 20px;
+.heart {
+  width: 14px;
+  height: 14px;
   background-color: #ccc;
   position: relative;
   transform: rotate(-45deg);
   transition: background-color 0.2s ease;
 }
 
+/* نصفي القلب */
 .heart::before,
 .heart::after {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background-color: #ccc;
   transition: background-color 0.2s ease;
 }
 
+/* الجانب الأيسر */
 .heart::before {
   top: 0;
-  left: 10px;
+  left: 7px;
 }
 
+/* الجانب العلوي */
 .heart::after {
-  top: -10px;
+  top: -7px;
+  left: 0;
+}
+
+/* القلوب المفعّلة (الحمراء الدائمة) */
+.active-heart .heart,
+.active-heart .heart::before,
+.active-heart .heart::after {
+  background-color: #e63946;
+}
+
+
+/* 
+.fav-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s ease;
+       position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .fav-btn:hover {
+      transform: scale(1.1);
+    }
+.heart {
+  width: 14px;
+  height: 14px;
+  background-color: #ccc;
+  position: relative;
+  transform: rotate(-45deg);
+  transition: background-color 0.2s ease;
+}
+
+/* نصفي القلب */
+/*.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.2s ease;
+}
+
+/* الجانب الأيسر */
+/* .heart::before {
+  top: 0;
+  left: 7px;
+}
+
+/* الجانب العلوي */
+/* .heart::after {
+  top: -7px;
   left: 0;
 }
 
 /* القلب لما يصير مفعّل */
-/*.fav-btn.active .heart,
+/* .fav-btn.active .heart,
 .fav-btn.active .heart::before,
 .fav-btn.active .heart::after {
   background-color: #e63946;
-}/*
+}*/
