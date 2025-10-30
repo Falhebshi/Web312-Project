@@ -1109,6 +1109,6 @@ td ul li ul li {
   background-color: #fdf6ff;
   padding: 10px 0; /* مسافة فوق وتحت */
   text-align: center;
-  margin: 190px 180px 80px 180px; /* مسافة من الجوانب */
+  margin:80px 180px; /* مسافة من الجوانب */
   border-radius: 40px; 
 }
