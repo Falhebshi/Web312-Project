@@ -55,11 +55,6 @@
           <img src="images/graystar.png" data-value="3" class="star">
           <img src="images/graystar.png" data-value="4" class="star">
           <img src="images/graystar.png" data-value="5" class="star">
-  <!--<span data-value="1">⚝</span>
-  <span data-value="2">⚝</span>
-  <span data-value="3">⚝</span>
-  <span data-value="4">⚝</span>
-  <span data-value="5">⚝</span>-->
         </div>
 <input type="hidden" id="ratingValue" name="ratingValue">
 
@@ -118,45 +113,6 @@
 
   <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
 </footer>
-
-<!--
-<script>
-const stars = document.querySelectorAll('#starRating span');
-const ratingValue = document.getElementById('ratingValue');
-
-stars.forEach(star => {
-  star.addEventListener('click', () => {
-    const value = parseInt(star.getAttribute('data-value'));
-    ratingValue.value = value;
-
-    // عند الضغط نبدل الرموز
-    stars.forEach((s, index) => {
-      if (index < value) {
-        s.textContent = '⭐'; // تعبئة
-      } else {
-        s.textContent = '⚝'; // فارغة
-      }
-    });
-  });
-
-  // تأثير مؤقت عند المرور بالماوس (اختياري)
-  star.addEventListener('mouseover', () => {
-    const hoverValue = parseInt(star.getAttribute('data-value'));
-    stars.forEach((s, index) => {
-      s.textContent = index < hoverValue ? '⭐' : '⚝';
-    });
-  });
-
-  // يرجع للوضع اللي اختاره المستخدم
-  star.addEventListener('mouseleave', () => {
-    const currentValue = parseInt(ratingValue.value) || 0;
-    stars.forEach((s, index) => {
-      s.textContent = index < currentValue ? '⭐' : '⚝';
-    });
-  });
-});
-</script>
--->
 
 
 </body>
