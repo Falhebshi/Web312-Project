@@ -410,11 +410,11 @@ p {
 
 
 /*-----SERVICES PAGE-----*/
-#services_page_heading {
+/* #services_page_heading {
   text-align: center;
   color: #333;
   font-size: 2em;
-}
+} */
 
 .service_description-services {
   font-size: 16px;
@@ -505,6 +505,19 @@ p span.price {
   /*content: url(images/Saudi_Riyal_Symbol_16x18.png);
   height: 12px;
   width: auto;*/
+}
+
+.counter-container pre{
+   margin-top: 0.5em;
+  color: #b07a28;
+  text-align: right;
+  float: left;
+}
+
+.counter-container pre::after{
+  content: url(images/fire.svg);
+  display: inline-block;
+  background
 }
 
 /* Lama */
