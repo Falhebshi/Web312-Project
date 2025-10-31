@@ -2,218 +2,237 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tethkaar's services</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tethkaar's services</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header> <!--header: nav-bar+logo-->
-        <div class="brand">
-            <a href="index.html"><img src="images/logo.png" alt="Tethkar logo" class="logo" /></a>
+  <!-- Header -->
+  <header> <!--header: nav-bar+logo-->
+    <div class="brand">
+      <a href="index.html"><img src="images/logo.png" alt="Tethkar logo" class="logo"></a>
+    </div>
+
+    <nav class="navigation_bar">
+      <ul>
+        <li>
+          <div class="link"><a href="services.html" class="nav_item">الخدمات</a></div>
+        </li>
+        <li>
+          <div class="link"><a href="customer.html" class="nav_item">العميل</a></div>
+        </li>
+        <li>
+          <div class="link"><a href="manager.html" class="nav_item">مزود الخدمة</a></div>
+        </li>
+        <li>
+          <div class="link"><a href="about-us.html" class="nav_item">من نحن</a></div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="index.html">الرئيسية</a> ›
+      <span>الخدمات</span>
+      <hr>
+    </nav>
+    <h1 class="main_heading">لحظاتك الجميلة تبدأ هنا</h1>
+    <p id="sort">فرز حسب <select name="sort_list">
+        <optgroup label="السعر">
+          <option> الأدنى إلى الأعلى</option>
+          <option> الأعلى إلى الأدنى</option>
+        </optgroup>
+        <optgroup label="الاسم">
+          <option> من أ إلى ي</option>
+          <option> من ي إلى أ</option>
+        </optgroup>
+      </select></p>
+
+
+    <div class="services-container">
+
+      <div class="service_card">
+        <button class="fav-btn">
+          <span class="heart"></span>
+        </button>
+        <img src="images/img-airballoon.png" alt="Hot air balloon" class="service_image">
+        <h3 class="service_title">رحلة منطاد العلا</h3>
+        <p class="service_description-services">استمتع برحلة جوية ساحرة فوق مناظر<br> العلا الخلابة في منطاد الهواء
+          الساخن.</p>
+        <div class="loc-price-container">
+          <p class="location">العلا</p>
+          <p class="price">١٨٠</p>
+          <div class="counter-container">
+            <pre>٢١  </pre>
+          </div>
         </div>
-          
-        <nav class="navigation_bar">
-             <ul>
-            <li><div class="link"><a href="services.html" class="nav_item">الخدمات</a></div></li>
-            <li><div class="link"><a href="customer.html" class="nav_item">العميل</a></div></li>
-            <li><div class="link"><a href="manager.html" class="nav_item">مزود الخدمة</a></div></li>
-            <li><div class="link"><a href="about-us.html" class="nav_item">من نحن</a></div></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn active-heart">
+          <span class="heart"></span>
+        </button>
+        <img src="images/pottery_image.jpg" alt="Girl doing pottery" class="service_image">
+        <h3 class="service_title">ورشة فخار</h3>
+        <p class="service_description-services">تعلم أساسيات صناعة الفخار في ورشة عمل ممتعة</p>
+        <div class="loc-price-container">
+          <p class="location">الرياض</p>
+          <p class="price">٢٥٠</p>
+          <div class="counter-container">
+            <pre>٢٥  </pre>
+          </div>
+        </div>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn active-heart">
+          <span class="heart"></span>
+        </button>
+        <img src="images/parasailing_image.jpg" alt="Person parasailing in the red sea" class="service_image">
+        <h3 class="service_title">التزلج الهوائي</h3>
+        <p class="service_description-services">استمتع بتجربة التحليق فوق مياه البحر الأحمر الصافية.</p>
+        <div class="loc-price-container">
+          <p class="location">جدة</p>
+          <p class="price">٤٠٠</p>
+          <div class="counter-container">
+            <pre>١١  </pre>
 
-    <main>
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb">
-            <a href="index.html">الرئيسية</a> ›
-            <span>الخدمات</span>
-            <hr>
-        </nav>
-            <h1 class="main_heading">لحظاتك الجميلة تبدأ هنا</h1>
-            <p id="sort">فرز حسب  <select name="sort_list">
-                <optgroup label="السعر">
-                <option> الأدنى إلى الأعلى</option>
-                <option> الأعلى إلى الأدنى</option>
-                </optgroup>
-                <optgroup label="الاسم">
-                <option> من أ إلى ي</option>
-                <option> من ي إلى أ</option>
-                </optgroup>
-            </select></p>
+          </div>
+        </div>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn">
+          <span class="heart"></span>
+        </button>
+        <img src="images/ws.jpeg" alt="Palm frond weaving workshop" class="service_image">
+        <h3 class="service_title">ورشة الخوص</h3>
+        <p class="service_description-services">شارك في نسج الخوص وصنع السلال اليدوية المستوحاة من تراث الواحات
+          السعودية.</p>
+        <div class="loc-price-container">
+          <p class="location">جدة</p>
+          <p class="price">١٨٠</p>
 
+        </div>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn active-heart">
+          <span class="heart"></span>
+        </button>
+        <img src="images/perfume.jpeg" alt="صناعة العطور العربية" class="service_image">
+        <h3 class="service_title">صناعة العطور العربية</h3>
+        <p class="service_description-services">كوّن عطرك الخاص من أجود أنواع الزيوت الشرقية في ورشة تعليمية تجمع بين
+          الأصالة والإبداع.</p>
+        <div class="loc-price-container">
+          <p class="location">الخبر</p>
+          <p class="price">٣٠٠</p>
 
-        <div class="services-container">
-          
-            <div class="service_card">
-                <button class="fav-btn">
-                  <span class="heart"></span>
-                </button>
-                <img src="images/img-airballoon.png" alt="Hot air balloon" class="service_image">
-                <h3 class="service_title">رحلة منطاد العلا</h3>
-                <p class="service_description-services">استمتع برحلة جوية ساحرة فوق مناظر<br> العلا الخلابة في منطاد الهواء الساخن.</p>
-                <div class="loc-price-container"><p class="location">العلا</p>
-                <p class="price">١٨٠</p>
-                <div class="counter-container">
-                  <pre>٢١  </pre>
-                </div>
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn active-heart">
-                  <span class="heart"></span>
-                </button>
-                <img src="images/pottery_image.jpg" alt="Girl doing pottery" class="service_image">
-                <h3 class="service_title">ورشة فخار</h3>
-                <p class="service_description-services">تعلم أساسيات صناعة الفخار في ورشة عمل ممتعة</p>
-                <div class="loc-price-container"><p class="location">الرياض</p>
-                <p class="price">٢٥٠</p>
-                <div class="counter-container">
-                  <pre>٢٥  </pre>
-                </div>
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn active-heart">
-                  <span class="heart"></span>
-                </button>
-                <img src="images/parasailing_image.jpg" alt="Person parasailing in the red sea" class="service_image">
-                <h3 class="service_title">التزلج الهوائي</h3>
-                <p class="service_description-services">استمتع بتجربة التحليق فوق مياه البحر الأحمر الصافية.</p>
-                <div class="loc-price-container"><p class="location">جدة</p>
-                <p class="price">٤٠٠</p>
-                <div class="counter-container">
-                  <pre>١١  </pre>
+        </div>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn">
+          <span class="heart"></span>
+        </button>
+        <img src="images/sdo.jpeg" alt="sdo workshop" class="service_image">
+        <h3 class="service_title">ورشة السدو</h3>
+        <p class="service_description-services">تعلم فن نسج السدو باستخدام الصوف والأدوات التقليدية، واستمتع بتجربة
+          حياكة قطعة تراثية بنفسك.</p>
+        <div class="loc-price-container">
+          <p class="location">الرياض</p>
+          <p class="price">٢١٠</p>
 
-                </div>
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn">
-                <span class="heart"></span>
-                </button>
-                <img src="images\ws.jpeg" alt="Palm frond weaving workshop" class="service_image">
-                <h3 class="service_title">ورشة الخوص</h3>
-                <p class="service_description-services">شارك في  نسج الخوص وصنع السلال اليدوية المستوحاة من تراث الواحات السعودية.</p>
-                <div class="loc-price-container"><p class="location">جدة</p>
-                <p class="price">١٨٠</p>
-                
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn active-heart">
-                  <span class="heart"></span>
-                </button>
-                <img src="images/perfume.jpeg" alt="صناعة العطور العربية" class="service_image">
-                <h3 class="service_title">صناعة العطور العربية</h3>
-                <p class="service_description-services">كوّن عطرك الخاص من أجود أنواع الزيوت الشرقية في ورشة تعليمية تجمع بين الأصالة والإبداع.</p>
-                <div class="loc-price-container"><p class="location">الخبر</p>
-                <p class="price">٣٠٠</p>
-                
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn">
-                <span class="heart"></span>
-                </button>
-                <img src="images\sdo.jpeg" alt="sdo workshop" class="service_image">
-                <h3 class="service_title">ورشة السدو</h3>
-                <p class="service_description-services">تعلم فن نسج السدو باستخدام الصوف والأدوات التقليدية، واستمتع بتجربة حياكة قطعة تراثية بنفسك.</p>
-                <div class="loc-price-container"><p class="location">الرياض</p>
-                <p class="price">٢١٠</p>
-                
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn">
-                <span class="heart"></span>
-                </button>
-                <img src="images\food.jpeg" alt="Traditional cooking workshop" class="service_image">
-                <h3 class="service_title">ورشة الطهي الشعبي</h3>
-                <p class="service_description-services"> اختبر مهارتك في إعداد الأكلات الشعبية السعودية مثل الجريش والقرصان على الطريقة القديمة.</p>
-                <div class="loc-price-container"><p class="location">الرياض</p>
-                <p class="price">١٨٠</p>
-                
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn">
-                <span class="heart"></span>
-                </button>
-                <img src="images\horses.jpeg" alt="Horse riding experience" class="service_image">
-                <h3 class="service_title">ركوب الخيل</h3>
-                <p class="service_description-services">استمتع بتجربة فريدة لركوب الخيل وسط أجواء طبيعية جميلة مع مدربين محترفين وتجربة آمنة وممتعة.</p>
-                <div class="loc-price-container"><p class="location">الرياض</p>
-                <p class="price">٣٥٠</p>
-                
-                </div>
-            </div>
-            <div class="service_card">
-                <button class="fav-btn active-heart">
-                  <span class="heart"></span>
-                </button>
-                <img src="images/masar.jpeg" alt="المسار الرياضي" class="service_image">
-                <h3 class="service_title">المسار الرياضي</h3>
-                <p class="service_description-services">احرص على نشاطك اليومي مع مسار رياضي مجهّز للمشي أو الجري في بيئة هادئة وآمنة ومناسبة لجميع الأعمار.</p>
-                <div class="loc-price-container"><p class="location">الرياض</p>
-                <p class="price">١٦٠</p>
-                
-                </div>
-            </div>
-            </div>
-    </main>
-  <!-- Footer -->
-<footer class="main-footer">
-  <div class="footer-container">
+        </div>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn">
+          <span class="heart"></span>
+        </button>
+        <img src="images/food.jpeg" alt="Traditional cooking workshop" class="service_image">
+        <h3 class="service_title">ورشة الطهي الشعبي</h3>
+        <p class="service_description-services"> اختبر مهارتك في إعداد الأكلات الشعبية السعودية مثل الجريش والقرصان على
+          الطريقة القديمة.</p>
+        <div class="loc-price-container">
+          <p class="location">الرياض</p>
+          <p class="price">١٨٠</p>
 
-    <!-- Right: About section -->
-    <div class="footer-column">
-      <h3>عن تذكار</h3>
-      <p>تذكار هو موقع يجمع أجمل التجارب والأنشطة في المملكة العربية السعودية، لتعيش كل لحظة وتحتفظ بذكراها. هدفنا مساعدتك في اكتشاف أماكن جديدة وتجارب لا تُنسى.</p>
-    </div>
+        </div>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn">
+          <span class="heart"></span>
+        </button>
+        <img src="images/horses.jpeg" alt="Horse riding experience" class="service_image">
+        <h3 class="service_title">ركوب الخيل</h3>
+        <p class="service_description-services">استمتع بتجربة فريدة لركوب الخيل وسط أجواء طبيعية جميلة مع مدربين محترفين
+          وتجربة آمنة وممتعة.</p>
+        <div class="loc-price-container">
+          <p class="location">الرياض</p>
+          <p class="price">٣٥٠</p>
 
-    <!-- Middle: Contact info -->
-    <div class="footer-column">
-      <h3>تواصل معنا</h3>
-      <div class="contact-info">
-    <div class="contact-icons"> 
-      <img src="images/telephone.svg" alt="Phone" class="icon">
-      <p>966111122223+</p>
-    </div>
-    <div class="contact-icons">
-      <a href="mailto:xxxxx@gmail.com"> 
-        <img src="images/email.svg" alt="Email" class="icon">
-        </a>
-      <p>Tethkar@gmail.com</p>
-    </div>
-  </div>
-  </div>
-  
-    <!-- Left: Social media icons -->
-    <div class="footer-column">
-      <h3>مواقع التواصل الاجتماعي</h3>
-      <div class="social-icons">
-        <img src="images/twitter-x.svg" alt="Twitter">
-        <img src="images/instagram.svg" alt="Instagram">
-        <img src="images/snapchat.svg" alt="Snapchat">
-        <p>Tethkar@</p>
+        </div>
+      </div>
+      <div class="service_card">
+        <button class="fav-btn active-heart">
+          <span class="heart"></span>
+        </button>
+        <img src="images/masar.jpeg" alt="المسار الرياضي" class="service_image">
+        <h3 class="service_title">المسار الرياضي</h3>
+        <p class="service_description-services">احرص على نشاطك اليومي مع مسار رياضي مجهّز للمشي أو الجري في بيئة هادئة
+          وآمنة ومناسبة لجميع الأعمار.</p>
+        <div class="loc-price-container">
+          <p class="location">الرياض</p>
+          <p class="price">١٦٠</p>
+
+        </div>
       </div>
     </div>
+  </main>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
 
-  </div>
+      <!-- Right: About section -->
+      <div class="footer-column">
+        <h3>عن تذكار</h3>
+        <p>تذكار هو موقع يجمع أجمل التجارب والأنشطة في المملكة العربية السعودية، لتعيش كل لحظة وتحتفظ بذكراها. هدفنا
+          مساعدتك في اكتشاف أماكن جديدة وتجارب لا تُنسى.</p>
+      </div>
 
-  <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
-</footer>
+      <!-- Middle: Contact info -->
+      <div class="footer-column">
+        <h3>تواصل معنا</h3>
+        <div class="contact-info">
+          <div class="contact-icons">
+            <img src="images/telephone.svg" alt="Phone" class="icon">
+            <p>966111122223+</p>
+          </div>
+          <div class="contact-icons">
+            <a href="mailto:xxxxx@gmail.com">
+              <img src="images/email.svg" alt="Email" class="icon">
+            </a>
+            <p>Tethkar@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left: Social media icons -->
+      <div class="footer-column">
+        <h3>مواقع التواصل الاجتماعي</h3>
+        <div class="social-icons">
+          <img src="images/twitter-x.svg" alt="Twitter">
+          <img src="images/instagram.svg" alt="Instagram">
+          <img src="images/snapchat.svg" alt="Snapchat">
+          <p>Tethkar@</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
+  </footer>
 
 </body>
 
 </html>
-
-
-<!-- <div class="hover_info" role="note"> 
-            <p>wasfwasfwasfwasf</p>
-            <p class="price">180SR</p>
-        </div> -->

@@ -2,168 +2,178 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tethkaar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tethkaar</title>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <header> <!--header: nav-bar+logo-->
-        <div class="brand">
-            <a href="index.html"><img src="images/logo.png" alt="Tethkar logo" class="logo" /></a>
+  <header> <!--header: nav-bar+logo-->
+    <div class="brand">
+      <a href="index.html"><img src="images/logo.png" alt="Tethkar logo" class="logo"></a>
+    </div>
+
+    <nav class="navigation_bar">
+      <ul>
+        <li>
+          <div class="link"><a href="services.html" class="nav_item">الخدمات</a></div>
+        </li>
+        <li>
+          <div class="link"><a href="customer.html" class="nav_item">العميل</a></div>
+        </li>
+        <li>
+          <div class="link"><a href="manager.html" class="nav_item">مزود الخدمة</a></div>
+        </li>
+        <li>
+          <div class="link"><a href="about-us.html" class="nav_item">من نحن</a></div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="frontpage-container">
+      <img src="images/pagefront2.jpeg" alt="homepage image" id='frontpage'>
+      <div class="frontpage-title">تــــــــــــذكــــــــــــار</div>
+    </div>
+    <h2 id="mission-title">مهمتنا</h2>
+    <p id="mission">توفير منصة سهلة الاستخدام وآمنة وموثوقة تربط بين العملاء ومزودي الخدمات في المملكة العربية السعودية.
+      نسعى لتبسيط عملية العثور على الخدمات وحجزها، مع ضمان تجربة سلسة لكل من العملاء ومزودي الخدمات.</p>
+    <section id='popular-services' class="sections">
+      <h2 class="section_title">الأكثر طلبًا</h2>
+
+
+      <div class="service_card">
+        <img src="images/img-airballoon.png" alt="Hot air balloon" class="service_image">
+        <h3 class="service_title">رحلة منطاد العلا</h3>
+        <p class="location">العلا</p>
+        <div class="service-hover-info">
+          <p>تفاصيل الخدمة</p>
+          <p class="service_description">تنظيف المنازل والمكاتب بمهارة واحترافية.</p>
+          <ul class="services-hover-information">
+            <li>الفئة المستهدفة: العائلات</li>
+            <li>المدة: 3 ساعات</li>
+            <li>السعر: 180 SR</li>
+          </ul>
         </div>
-          
-        <nav class="navigation_bar">
-             <ul>
-            <li><div class="link"><a href="services.html" class="nav_item">الخدمات</a></div></li>
-            <li><div class="link"><a href="customer.html" class="nav_item">العميل</a></div></li>
-            <li><div class="link"><a href="manager.html" class="nav_item">مزود الخدمة</a></div></li>
-            <li><div class="link"><a href="about-us.html" class="nav_item">من نحن</a></div></li>
-            </ul>
-        </nav>
-    </header>
-    <label for="nav-toggle" class="backdrop" aria-hidden="true"></label>
-    <main>
-        <div class="frontpage-container">
-        <img src="images/pagefront2.jpeg" alt="homepage image" id='frontpage' />
-        <div class="frontpage-title">تــــــــــــذكــــــــــــار</div>
+      </div>
+      <div class="service_card">
+        <img src="images/pottery_image.jpg" alt="Girl doing pottery" class="service_image">
+        <h3 class="service_title">ورشة فخار</h3>
+        <p class="location">الرياض</p>
+        <div class="service-hover-info">
+          <p>. ⊹ . ݁˖ . ݁تفاصيل الخدمة . ݁₊ ⊹ . ݁</p>
+          <p class="service_description">تعلم أساسيات صناعة الفخار في ورشة عمل ممتعة.</p>
+          <ul class="services-hover-information">
+            <li>الفئة المستهدفة: الجميع</li>
+            <li>المدة: ساعتان</li>
+            <li>السعر: 250 SR</li>
+          </ul>
         </div>
-        <h2 id="mission-title">مهمتنا</h2>
-        <p id="mission">توفير منصة سهلة الاستخدام وآمنة وموثوقة تربط بين العملاء ومزودي الخدمات في المملكة العربية السعودية. نسعى لتبسيط عملية العثور على الخدمات وحجزها، مع ضمان تجربة سلسة لكل من العملاء ومزودي الخدمات.</p>
-        <section id='popular-services' class="sections">
-            <h2 class="section_title">الأكثر طلبًا</h2>
+      </div>
+      <div class="service_card">
+        <img src="images/parasailing_image.jpg" alt="Person parasailing in the red sea" class="service_image">
+        <h3 class="service_title">التزلج الهوائي</h3>
+        <p class="location">جدة</p>
+        <div class="service-hover-info">
+          <p>تفاصيل الخدمة</p>
+          <p class="service_description">استمتع بتجربة التحليق فوق مياه البحر الأحمر الصافية.</p>
+          <ul class="services-hover-information">
+            <li>الفئة المستهدفة: محبي المغامرات</li>
+            <li>المدة: 30 دقيقة</li>
+            <li>السعر: 400 SR</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-
-            <div class="service_card">
-                <img src="images/img-airballoon.png" alt="Hot air balloon" class="service_image">
-                <h3 class="service_title">رحلة منطاد العلا</h3>
-                <p class="location">العلا</p>
-                <div class="service-hover-info">
-                  <p>تفاصيل الخدمة</p>
-                  <p class="service_description">تنظيف المنازل والمكاتب بمهارة واحترافية.</p>
-                  <ul class="services-hover-information">
-                    <li>الفئة المستهدفة: العائلات</li>
-                    <li>المدة: 3 ساعات</li>
-                    <li>السعر: 180 SR</li>
-                  </ul>
-                </div>
-            </div>
-            <div class="service_card">
-                <img src="images/pottery_image.jpg" alt="Girl doing pottery" class="service_image">
-                <h3 class="service_title">ورشة فخار</h3>
-                <p class="location">الرياض</p>
-                <div class="service-hover-info">
-                  <p>.  ⊹ . ݁˖ . ݁تفاصيل الخدمة . ݁₊ ⊹ . ݁</p>
-                  <p class="service_description">تعلم أساسيات صناعة الفخار في ورشة عمل ممتعة.</p>
-                  <ul class="services-hover-information">
-                    <li>الفئة المستهدفة: الجميع</li>
-                    <li>المدة: ساعتان</li>
-                    <li>السعر: 250 SR</li>
-                  </ul>
-                </div>
-            </div>
-            <div class="service_card">
-                <img src="images/parasailing_image.jpg" alt="Person parasailing in the red sea" class="service_image">
-                <h3 class="service_title">التزلج الهوائي</h3>
-                <p class="location">جدة</p>
-                <div class="service-hover-info">
-                  <p>تفاصيل الخدمة</p>
-                  <p class="service_description">استمتع بتجربة التحليق فوق مياه البحر الأحمر الصافية.</p>
-                  <ul class="services-hover-information">
-                    <li>الفئة المستهدفة: محبي المغامرات</li>
-                    <li>المدة: 30 دقيقة</li>
-                    <li>السعر: 400 SR</li>
-                  </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id='reviews' class="sections">
-            <h2 class="section_title">تعليقات عملاءنا</h2>
-            <div class="review_card">
-                <div class="review_header">
-                    <p class="reviewer_name">نور الغويري</p><img src="images/star_rating.png" alt="star rating"
-                        class="star_rating">
-                </div>
-                <p class="reviewer_service">رحلة منطاد</p>
-                <p class="review_text">"خدمة ممتازة! وجدت مزود خدمة <br>بسرعة وسهولة."</p>
-            </div>
-            <div class="review_card">
-                <div class="review_header">
-                    <p class="reviewer_name">عروب السويد</p>
-                    <img src="images/star_rating.png" alt="star rating" class="star_rating">
-                </div>
-                <p class="reviewer_service">ورشة فخار</p>
-                <p class="review_text">"منصة سهلة الاستخدام وتجربة سلسة."</p>
-            </div>
-            <div class="review_card">
-                <div class="review_header">
-                    <p class="reviewer_name">حوراء الحماد</p>
-                    <img src="images/star_rating.png" alt="star rating" class="star_rating">
-                </div>
-                <p class="reviewer_service">ركوب الخيل</p>
-                <p class="review_text">"أنصح بشدة باستخدام تذكار لأي شخص<br> يبحث عن خدمات موثوقة."</p>
-            </div>
-        </section>
-        <section id="gallery" class="sections">
-            <h2 class="section_title">معرض الصور</h2>
-            <div class="gallery_grid">
-                <img src="images/horse_riding_gallery.jpg" alt="Two girls riding horses" class="gallery_image">
-                <img src="images/marathon_gallery.jpg" alt="Marathon runner" class="gallery_image">
-                <img src="images/kids_at_waterpark.jpg" alt="Kids playing at a waterpark" class="gallery_image">
-                <img src="images/playground.jpg" alt="Kids playing at a playground" class="gallery_image">
-                <img src="images/oud_concert.png" alt="oud concert" class="gallery_image">
-                <img src="images/kids_painting_workshop.jpg" alt="kids in a painting workshop" class="gallery_image">
-                <img src="images/girl_father_atzoo.png" alt="A father and his daughter at the zoo" class="gallery_image">
-                <img src="images/pic_at_maraya.jpg" alt="A couple taking a picture at Maraya AlUla" class="gallery_image">
-                <img src="images/food.jpeg" alt="Lady cooking traditional food" class="gallery_image">
-            </div>
-    </main>
+    <section id='reviews' class="sections">
+      <h2 class="section_title">تعليقات عملاءنا</h2>
+      <div class="review_card">
+        <div class="review_header">
+          <p class="reviewer_name">نور الغويري</p><img src="images/star_rating.png" alt="star rating"
+            class="star_rating">
+        </div>
+        <p class="reviewer_service">رحلة منطاد</p>
+        <p class="review_text">"خدمة ممتازة! وجدت مزود خدمة <br>بسرعة وسهولة."</p>
+      </div>
+      <div class="review_card">
+        <div class="review_header">
+          <p class="reviewer_name">عروب السويد</p>
+          <img src="images/star_rating.png" alt="star rating" class="star_rating">
+        </div>
+        <p class="reviewer_service">ورشة فخار</p>
+        <p class="review_text">"منصة سهلة الاستخدام وتجربة سلسة."</p>
+      </div>
+      <div class="review_card">
+        <div class="review_header">
+          <p class="reviewer_name">حوراء الحماد</p>
+          <img src="images/star_rating.png" alt="star rating" class="star_rating">
+        </div>
+        <p class="reviewer_service">ركوب الخيل</p>
+        <p class="review_text">"أنصح بشدة باستخدام تذكار لأي شخص<br> يبحث عن خدمات موثوقة."</p>
+      </div>
+    </section>
+    <section id="gallery" class="sections">
+      <h2 class="section_title">معرض الصور</h2>
+      <div class="gallery_grid">
+        <img src="images/horse_riding_gallery.jpg" alt="Two girls riding horses" class="gallery_image">
+        <img src="images/marathon_gallery.jpg" alt="Marathon runner" class="gallery_image">
+        <img src="images/kids_at_waterpark.jpg" alt="Kids playing at a waterpark" class="gallery_image">
+        <img src="images/playground.jpg" alt="Kids playing at a playground" class="gallery_image">
+        <img src="images/oud_concert.png" alt="oud concert" class="gallery_image">
+        <img src="images/kids_painting_workshop.jpg" alt="kids in a painting workshop" class="gallery_image">
+        <img src="images/girl_father_atzoo.png" alt="A father and his daughter at the zoo" class="gallery_image">
+        <img src="images/pic_at_maraya.jpg" alt="A couple taking a picture at Maraya AlUla" class="gallery_image">
+        <img src="images/food.jpeg" alt="Lady cooking traditional food" class="gallery_image">
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-<footer class="main-footer">
-  <div class="footer-container">
+  <footer class="main-footer">
+    <div class="footer-container">
 
-    <!-- Right: About section -->
-    <div class="footer-column">
-      <h3>عن تذكار</h3>
-      <p>تذكار هو موقع يجمع أجمل التجارب والأنشطة في المملكة العربية السعودية، لتعيش كل لحظة وتحتفظ بذكراها. هدفنا مساعدتك في اكتشاف أماكن جديدة وتجارب لا تُنسى.</p>
-    </div>
-
-    <!-- Middle: Contact info -->
-    <div class="footer-column">
-      <h3>تواصل معنا</h3>
-      <div class="contact-info">
-    <div class="contact-icons"> 
-      <img src="images/telephone.svg" alt="Phone" class="icon">
-      <p>966111122223+</p>
-    </div>
-    <div class="contact-icons">
-      <a href="mailto:xxxxx@gmail.com"> 
-        <img src="images/email.svg" alt="Email" class="icon">
-        </a>
-      <p>Tethkar@gmail.com</p>
-    </div>
-  </div>
-  </div>
-  
-    <!-- Left: Social media icons -->
-    <div class="footer-column">
-      <h3>مواقع التواصل الاجتماعي</h3>
-      <div class="social-icons">
-        <img src="images/twitter-x.svg" alt="Twitter">
-        <img src="images/instagram.svg" alt="Instagram">
-        <img src="images/snapchat.svg" alt="Snapchat">
-        <p>Tethkar@</p>
+      <!-- Right: About section -->
+      <div class="footer-column">
+        <h3>عن تذكار</h3>
+        <p>تذكار هو موقع يجمع أجمل التجارب والأنشطة في المملكة العربية السعودية، لتعيش كل لحظة وتحتفظ بذكراها. هدفنا
+          مساعدتك في اكتشاف أماكن جديدة وتجارب لا تُنسى.</p>
       </div>
+
+      <!-- Middle: Contact info -->
+      <div class="footer-column">
+        <h3>تواصل معنا</h3>
+        <div class="contact-info">
+          <div class="contact-icons">
+            <img src="images/telephone.svg" alt="Phone" class="icon">
+            <p>966111122223+</p>
+          </div>
+          <div class="contact-icons">
+            <a href="mailto:xxxxx@gmail.com">
+              <img src="images/email.svg" alt="Email" class="icon">
+            </a>
+            <p>Tethkar@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left: Social media icons -->
+      <div class="footer-column">
+        <h3>مواقع التواصل الاجتماعي</h3>
+        <div class="social-icons">
+          <img src="images/twitter-x.svg" alt="Twitter">
+          <img src="images/instagram.svg" alt="Instagram">
+          <img src="images/snapchat.svg" alt="Snapchat">
+          <p>Tethkar@</p>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
-</footer>
+    <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
+  </footer>
 </body>
 
 </html>
