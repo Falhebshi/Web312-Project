@@ -12,9 +12,10 @@ body {
   font-family: "Arial", sans-serif;
   padding: 0;
   background-image:radial-gradient(rgb(255, 255, 255), rgb(240, 237, 237));/*radial-gradient(white, rgb(201, 231, 243)); radial-gradient(white, rgb(240, 237, 237))*/
-   background-repeat: no-repeat;
-   background-size: cover;
-  background-attachment: fixed;
+  /*background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; */
+  overflow-x: hidden;
   color: #333;
 }
 
