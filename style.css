@@ -249,9 +249,9 @@ nav .brand {
 /* Services and Reviews Sections */
 .sections {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 4em;
   margin: 40px ;
 }
 
@@ -389,21 +389,21 @@ p {
   justify-content: center;
   margin-top: 20px;
   margin-right: 1em;
-
 }
 
-.gallery_grid img {
+.gallery_grid .gallery_image {
   width: 300px;
   height: 300px;
-  object-fit: fill;
-  /* Ensure images cover the area */
+  object-fit: fill; /* Ensure images cover the area */
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-  /* transition: transform 0.3s ease; */
 }
 
-.gallery_grid img:hover {
+.gallery_grid .gallery_image:hover {
   transform: translateY(-5px);
+  filter: brightness(1.075); /*increases the brightness of the image when hovered on*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.295);
+  border: 2px solid #a9a9a99d;
   transition: all 0.3s ease;
 }
 
