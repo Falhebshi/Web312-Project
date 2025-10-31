@@ -932,15 +932,20 @@ hr#section {
 
 .team-container{
   display: flex;
-  justify-content: space-around;
-  overflow-x: auto;
-  
-
+  justify-content: space-around;             
+  overflow-x: auto;            
+  white-space: nowrap;          
+  padding: 20px;
 }
 
 .team-member{
-  flex: 0 0 auto;
-  text-align: center;
+
+ flex: 0 0 auto;    
+  width: 150px;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .h2about-us{
@@ -1026,16 +1031,16 @@ table {
 }
 
 /* الصورة */
-.member-name th::before {
+#lama .member-name th::before {
   content: "";
   position: absolute;
   right: 25px;          
   top: 50%;
   transform: translateY(-50%); 
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background-image: url('images/profile.png'); 
+  background-image: url('images/lama.jpg'); 
   background-size: cover;
   background-position: center;
 
@@ -1305,4 +1310,30 @@ td ul li ul li {
 .share-btn:hover {
   background-color: #8b6a2b; /* لون أغمق عند التمرير */
   transform: scale(1.05);
+}
+
+@font-face {
+  font-family: Handicraft;
+  src: url("font/TheYearofHandicrafts-Regular.otf");
+}
+
+*{
+  font-family: Handicraft;
+}
+
+.about-text {
+  text-align: center;     
+  margin: 0 auto;           
+  padding: 10px 100px;    
+  max-width: 900px;      
+  line-height: 1.8;       
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;     
+  object-fit: cover;    
+  border: 3px solid #a46a1f; 
+
 }
