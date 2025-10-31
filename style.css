@@ -579,6 +579,7 @@ p span.price {
 .dashboard-buttons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -586,25 +587,15 @@ p span.price {
 }
 
 /* Button style */
-.dashboard-btn {
+.dashboard-btn { 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* size */
   width: 360px;
-  /* wider button */
   padding: 20px 28px;
-  /* taller button */
-
-  /* text style */
   font-size: 20px;
-  /* bigger text */
   font-weight: bold;
   letter-spacing: 0.5px;
-  /* adds a little spacing between letters */
-
-  /* border and colors */
   border: 3px solid #b07a28;
   border-radius: 14px;
   text-decoration: none;
