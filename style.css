@@ -967,62 +967,7 @@ hr#section {
   color: #333;
   margin-top: 2em;
 }
-/* يحتاج تعديل 
-form#f{
-  width :80%;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 30px 40px;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;      
-  gap: 18px;
-  line-height: 30px;
-}
-input[type='text'], input[type='tel'],input[type='email'],input[type='date'], textarea, select{
-  
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  box-sizing: border-box;
 
-}
-input[type="submit"]{
- 
-  background-color: #b07a28;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  
-  
-}
-
-.form{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
- 
-}
-
-form label{
-  font-weight: bold;
-  color: #333;
-}
-
-input[type="file"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px; } */
 
 table {
   width: 85%;
@@ -1044,21 +989,107 @@ table {
   border-radius: 8px 8px 0 0;
 }
 
-/* الصورة */
-#lama .member-name th::before {
+
+.member-name th{
+  position: relative;         
+  padding-right: 100px;       
+  text-align: right;        
+  vertical-align: middle;     
+  background: #a46a1f;      
+}
+
+
+#lama th::before{
   content: "";
   position: absolute;
-  right: 25px;          
-  top: 50%;
-  transform: translateY(-50%); 
-  width: 70px;
-  height: 70px;
+  right: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;              
+  width: 60px;                
+  height: 60px;
   border-radius: 50%;
+  display: block;
   background-image: url('images/lama.jpg'); 
   background-size: cover;
   background-position: center;
-
+  background-repeat: no-repeat;
+ 
 }
+
+#lama th::before{
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;              
+  width: 60px;                
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  background-image: url('images/lama.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+#haya th::before{
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;              
+  width: 60px;                
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  background-image: url('images/haya.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+#raghad th::before{
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;              
+  width: 60px;                
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  background-image: url('images/raghad.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+#fatimah th::before{
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;              
+  width: 60px;                
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  background-image: url('images/fatimah.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+
 
 
 .member-name th {
@@ -1141,7 +1172,7 @@ td ul li ul li {
   height: 55px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #8b5cf6;
+  border: 2px solid #a46a1f;
 }
 
 .staff-item input[type="checkbox"] {
@@ -1350,4 +1381,11 @@ td ul li ul li {
   object-fit: cover;    
   border: 3px solid #a46a1f; 
 
+}
+
+.team-member a{
+  color: #b07a28;
+}
+.team-member a:hover{
+  color: #8b6a2b;
 }
