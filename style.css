@@ -1143,6 +1143,7 @@ td ul li ul li {
 }
 
 /* ---- Share Button ---- */
+/*
 .share-btn-container {
   text-align: center;
   margin-top: 10px;
@@ -1151,7 +1152,6 @@ td ul li ul li {
 .share-btn {
   display: inline-block;
   background-color: #b68d40;
-  /* لون ذهبي جميل */
   color: white;
   padding: 6px 12px;
   border-radius: 25px;
@@ -1163,9 +1163,8 @@ td ul li ul li {
 
 .share-btn:hover {
   background-color: #8b6a2b;
-  /* لون أغمق عند التمرير */
   transform: scale(1.05);
-}
+}*/
 
 @font-face {
   font-family: Handicraft;
