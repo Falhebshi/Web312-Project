@@ -678,8 +678,6 @@ p span.price {
   color: #333;
 }
 
-
-
 /* Request form section */
 .request-section {
   width: 70%;
@@ -983,9 +981,6 @@ table {
 
 }
 
-
-
-
 .member-name th {
   padding-right: 120px;
 }
@@ -999,7 +994,6 @@ thead th {
   text-align: center;
 }
 
-
 td {
   padding: 12px 15px;
   text-align: center;
@@ -1007,14 +1001,11 @@ td {
   border: 1px solid #eaeaea;
 }
 
-
-
 td ul {
   list-style-type: none;
   padding: 0 0 0 15px;
   margin: 0;
   text-align: right;
-
 }
 
 td ul li {
@@ -1025,12 +1016,10 @@ td ul li {
   font-weight: bold;
 }
 
-
 td ul li ul {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 2px solid #b07a28;
-
 }
 
 td ul li ul li {
@@ -1201,7 +1190,6 @@ td ul li ul li {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #a46a1f;
-
 }
 
 .team-member a {
