@@ -517,6 +517,8 @@ p span.price {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
   /* يخلي الكروت تنزل سطر جديد إذا ما فيه مساحة */
   justify-content: center;
   /* يوسّط الصف */
