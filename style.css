@@ -9,14 +9,9 @@ html {
 /*-----BODY-----*/
 body {
   margin-top: 120px;
-  /* أو حسب ارتفاع الهيدر عندك */
   font-family: "Arial", sans-serif;
   padding: 0;
   background-image: radial-gradient(rgb(255, 255, 255), rgb(240, 237, 237));
-  /*radial-gradient(white, rgb(201, 231, 243)); radial-gradient(white, rgb(240, 237, 237))*/
-  /*background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; */
   overflow-x: hidden;
   color: #333;
 }
@@ -31,20 +26,14 @@ header {
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  /*border-radius: 10px;*/
   border-radius: 0 0 10px 10px;
   position: fixed;
-  /* يثبت الهيدر في الأعلى */
   top: 0;
-  /* يضعه في أعلى الصفحة */
   left: 0;
-  /* يبعده قليلاً عن الحافة اليسرى */
   width: 100%;
-  /* يغطي عرض الشاشة */
   background-color: #F3EFEA;
   color: #333;
   z-index: 1;
-  /* حتى يكون فوق باقي العناصر */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.113);
 
 }
@@ -69,11 +58,8 @@ header {
   gap: 100rem;
   /* Space between links */
   background: #ffffff;
-  /* Optional: add background */
   padding: 12px 16px;
-  /* Optional: add padding */
-  border-radius: 8px;
-  /* Optional: rounded corners */
+  border-radius: 8px
 }
 
 nav ul {
@@ -107,7 +93,6 @@ nav .brand {
 
 .navigation_bar div:hover {
   background-color: #f4e8d962;
-  /*#d9ebf462;*/
   border-radius: 1em;
 }
 
@@ -130,18 +115,13 @@ nav .brand {
 /*-----FOOTER-----*/
 /* Footer container */
 .main-footer {
-  /*margin: 0 30px 30px 30px;*/
   margin: 0;
-  /*background-color: #fff;*/
   background-color: #f4ece4;
-  /* border-top: 2px solid #b07a28; 
-  padding: 30px 20px;*/
   color: #333;
   border-top: 3px solid #f4ece4;
   padding: 20px;
   font-size: 15px;
   text-align: center;
-  /*border-radius: 10px;*/
   width: 100%;
 }
 
@@ -407,7 +387,6 @@ p {
   transition: all 0.3s ease;
 }
 
-
 .service_description-services {
   font-size: 16px;
   color: #555;
@@ -490,14 +469,10 @@ p span.price {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 16px;
-  /* 👈 تحكم بالحجم من هنا */
   width: 12px;
   height: 12px;
   margin-right: 4px;
   vertical-align: middle;
-  /*content: url(images/Saudi_Riyal_Symbol_16x18.png);
-  height: 12px;
-  width: auto;*/
 }
 
 .counter-container pre {
@@ -519,11 +494,8 @@ p span.price {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  /* يخلي الكروت تنزل سطر جديد إذا ما فيه مساحة */
   justify-content: center;
-  /* يوسّط الصف */
   gap: 2px;
-  /* يضيف مسافة بين الكروت */
   padding: 20px 0;
 }
 
@@ -543,7 +515,6 @@ p span.price {
   min-height: 150px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  /* ضروري لتثبيت موقع القلب داخل البطاقة */
 }
 
 .favorite_card {
@@ -561,7 +532,6 @@ p span.price {
   min-height: 150px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  /* ضروري لتثبيت موقع القلب داخل البطاقة */
 }
 
 /* Hover effect for event cards */
@@ -828,10 +798,8 @@ hr#section {
 #favorite-events {
   display: flex;
   flex-wrap: wrap;
-  /* يخلي الكروت تنزل سطر جديد إذا المساحة ما تكفي */
   justify-content: center;
   gap: 20px;
-  /* مسافة بين الكروت */
 }
 
 
@@ -858,7 +826,6 @@ hr#section {
   color: #333;
   margin-top: 2em;
 }
-
 
 table {
   width: 85%;
@@ -889,7 +856,6 @@ table {
   vertical-align: middle;
   background: #a46a1f;
 }
-
 
 #lama th::before {
   content: "";
@@ -1076,7 +1042,6 @@ td ul li ul li {
   color: #333;
 }
 
-
 /* fav button*/
 .fav-btn {
   background: none;
@@ -1101,7 +1066,6 @@ td ul li ul li {
   transform: scale(1.1);
 }
 
-/* شكل القلب */
 .heart {
   width: 14px;
   height: 14px;
@@ -1111,7 +1075,6 @@ td ul li ul li {
   transition: background-color 0.2s ease;
 }
 
-/* نصفي القلب */
 .heart::before,
 .heart::after {
   content: '';
@@ -1123,48 +1086,21 @@ td ul li ul li {
   transition: background-color 0.2s ease;
 }
 
-/* الجانب الأيسر */
 .heart::before {
   top: 0;
   left: 7px;
 }
 
-/* الجانب العلوي */
 .heart::after {
   top: -7px;
   left: 0;
 }
 
-/* القلوب المفعّلة (الحمراء الدائمة) */
 .active-heart .heart,
 .active-heart .heart::before,
 .active-heart .heart::after {
   background-color: #e63946;
 }
-
-/* ---- Share Button ---- */
-/*
-.share-btn-container {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.share-btn {
-  display: inline-block;
-  background-color: #b68d40;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.share-btn:hover {
-  background-color: #8b6a2b;
-  transform: scale(1.05);
-}*/
 
 @font-face {
   font-family: Handicraft;
