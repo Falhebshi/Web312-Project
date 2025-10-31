@@ -230,15 +230,7 @@ nav .brand {
   color: white;
 }
 
-.frontpage-title {
-  position: absolute;
-  top: 15%;
-  left: 32%;
-  /* transform: translate(-50%, -50%); */
-  font-weight: bold;
-  font-size: 4em;
-  font-family: "Amiri", serif;
-}
+
 
 #mission-title {
   text-align: center;
@@ -893,7 +885,7 @@ hr#section {
 
 table {
   width: 85%;
-  margin: 30px auto;
+  margin: 40px auto 90px auto;
   border-collapse: collapse;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
