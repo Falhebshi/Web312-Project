@@ -479,13 +479,21 @@ p span.price {
   margin-top: 0.5em;
   color: #b07a28;
   text-align: right;
-  float: left;
 }
 
-.counter-container pre::after {
+.counter-container pre:hover{
+  color: #bd5d19;
+  font-weight: bold;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.viral pre::after {
   content: url(images/fire.svg);
   display: inline-block;
 }
+
 
 /* Event cards container */
 #previous-events {
