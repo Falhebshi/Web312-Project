@@ -1067,9 +1067,6 @@ td ul li ul li {
   right: 10px;
 }
 
-.fav-btn:hover {
-  transform: scale(1.1);
-}
 
 .heart {
   width: 14px;
@@ -1105,6 +1102,10 @@ td ul li ul li {
 .active-heart .heart::before,
 .active-heart .heart::after {
   background-color: #e63946;
+}
+
+.fav-btn:hover {
+  transform: scale(1.1);
 }
 
 @font-face {
