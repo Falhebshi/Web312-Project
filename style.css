@@ -1,4 +1,5 @@
 /*-----reset some default styles-----*/
+
 body,
 html {
   margin: 0;
@@ -137,7 +138,6 @@ nav .brand {
   margin: auto;
 }
 
-/* Each column */
 .footer-column {
   flex: 1;
   min-width: 250px;
@@ -284,7 +284,6 @@ h2.section_title {
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  /* hidden by default */
   transition: opacity 0.3s ease;
   border-radius: 8px;
 }
@@ -310,7 +309,6 @@ h2.section_title {
 }
 
 p {
-  /*any paragraph*/
   color: #555;
   font-size: 0.9rem;
 }
@@ -336,14 +334,12 @@ p {
 
 .reviewer_name::before {
   content: url(images/person-circle.svg);
-  /*image url*/
   display: inline-block;
   padding-left: 0.5em;
 }
 
 .location::before {
   content: url(images/geo-alt-fill.svg);
-  /*image url*/
   display: inline-block;
   padding-left: 0.3em;
 }
@@ -373,7 +369,7 @@ p {
 .gallery_grid .gallery_image {
   width: 300px;
   height: 300px;
-  object-fit: fill; /* Ensure images cover the area */
+  object-fit: fill; 
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
 }
@@ -630,7 +626,6 @@ p span.price {
   transform: translateY(-3px);
 }
 
-/* Adjust icon and arrow inside */
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -1015,11 +1010,8 @@ td ul li ul li {
 .staff-list {
   display: flex;
   flex-direction: column;
-  /* stack staff items vertically */
   gap: 15px;
-  /* space between each staff member */
   align-items: flex-start;
-  /* align items to the right edge for Arabic */
   margin-bottom: 20px;
 }
 
@@ -1028,14 +1020,12 @@ td ul li ul li {
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
-  /* space between checkbox, image, and name */
   background-color: #fff;
   padding: 10px 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: fit-content;
   direction: rtl;
-  /* makes checkbox appear on the right for Arabic */
   cursor: pointer;
 }
 
