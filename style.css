@@ -253,7 +253,6 @@ h2.section_title {
   width: 250px;
   text-align: center;
   position: relative;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
