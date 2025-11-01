@@ -474,13 +474,18 @@ p span.price {
   vertical-align: middle;
 }
 
-.counter-container pre {
-  margin-top: 0.5em;
+
+.counter-container {
+  display: inline-flex;          
+  align-items: center;          
+  justify-content: flex-end;
+  gap: 4px;                      
   color: #b07a28;
   text-align: right;
+  line-height: 1;                
 }
 
-.counter-container pre:hover{
+.counter-container:hover {
   color: #bd5d19;
   font-weight: bold;
   transform: translateY(-5px);
@@ -488,10 +493,25 @@ p span.price {
   cursor: pointer;
 }
 
-.viral pre::after {
-  content: url(images/fire.svg);
+.counter-container::after {
+  content: "";
+  width: 15px;
+  height: 15px;
   display: inline-block;
+  mask: url("images/fire.svg") no-repeat center / contain;
+  -webkit-mask: url("images/fire.svg") no-repeat center / contain;
+  background-color: black; 
+  flex-shrink: 0; 
+  transform: translateY(1px); 
 }
+
+.viral::after {
+  background-color: orange;
+}
+
+
+
+
 
 
 /* Event cards container */
