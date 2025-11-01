@@ -476,21 +476,26 @@ p span.price {
 
 
 .counter-container {
-  display: inline-flex;          
-  align-items: center;          
-  justify-content: flex-end;
-  gap: 4px;                      
-  color: #b07a28;
+  color: #000000;
   text-align: right;
-  line-height: 1;                
+  margin-bottom: 0.5em;
+}
+
+.viral{
+  color: orange;
 }
 
 .counter-container:hover {
-  color: #bd5d19;
   font-weight: bold;
   transform: translateY(-5px);
   transition: all 0.3s ease;
-  cursor: pointer;
+}
+
+.viral:hover{
+  color: #ff9018;
+  font-weight: bold;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
 }
 
 .counter-container::after {
@@ -498,21 +503,17 @@ p span.price {
   width: 15px;
   height: 15px;
   display: inline-block;
-  mask: url("images/fire.svg") no-repeat center / contain;
-  -webkit-mask: url("images/fire.svg") no-repeat center / contain;
-  background-color: black; 
-  flex-shrink: 0; 
-  transform: translateY(1px); 
+  background-image: url("images/fire.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 4px;
+  vertical-align: middle;
 }
 
 .viral::after {
-  background-color: orange;
+  filter: invert(83%) sepia(43%) saturate(5088%) hue-rotate(328deg) brightness(101%) contrast(101%);
 }
-
-
-
-
-
 
 /* Event cards container */
 #previous-events {
