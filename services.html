@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tethkaar's services</title>
   <link rel="stylesheet" href="style.css">
+  <script src = "script.js"></script>
 </head>
 
 <body>
@@ -42,20 +43,21 @@
       <hr>
     </nav>
     <h1 class="main_heading">لحظاتك الجميلة تبدأ هنا</h1>
-    <p id="sort">فرز حسب <select name="sort_list">
+    <p id="sort">فرز حسب <select id ="sortSelect" name="sort_list">
+      <option>اختر هنا</option>
         <optgroup label="السعر">
-          <option> الأدنى إلى الأعلى</option>
-          <option> الأعلى إلى الأدنى</option>
+          <option value="price-asc"> الأدنى إلى الأعلى</option>
+          <option value="price-desc"> الأعلى إلى الأدنى</option>
         </optgroup>
         <optgroup label="الاسم">
-          <option> من أ إلى ي</option>
-          <option> من ي إلى أ</option>
+          <option value="name-asc"> من أ إلى ي</option>
+          <option value="name-desc"> من ي إلى أ</option>
         </optgroup>
       </select></p>
 
 
 
-    <div class="services-container">
+    <div id='ServicesPageContainer' class="services-container">
 
       <div class="service_card">
         <button class="fav-btn">

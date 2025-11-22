@@ -6,6 +6,13 @@ html {
   padding: 0;
 }
 
+/* Make padding and border included in element width */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 /*-----BODY-----*/
 body {
@@ -1159,4 +1166,194 @@ td ul li ul li ul li{
   font-size: 12px;
   color: #555;
   font-weight: normal;
+}
+
+.menu-toggle {
+  display: none;              /* will show only on small screens */
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  /* margin-right: auto;         pushes nav to the left in RTL layout */
+}
+
+.menu-toggle img {
+  width: 40px;
+  height: 40px;
+
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem; /* small space between logo and nav */
+  }
+
+  .brand .logo {
+    margin: 0 0 0.5rem 0; /* remove big margins on smaller screens */
+  }
+
+  .navigation_bar {
+  gap: 2rem;
+  width: 100%;
+}
+
+  nav ul {
+    gap: 2rem;        /* smaller gap between links */
+  }
+
+   #frontpage {
+    height: auto;   /* let it scale naturally */
+    width: 90%;     /* take most of the width */
+  }
+
+  .sections {
+    margin: 30px 20px;
+  }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  body {
+    margin-top: 110px;
+    font-size: x-small;
+  }
+
+   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    border-radius: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .brand .logo {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .frontpage-container{
+    display: block;
+    margin-top: 5rem;
+  }
+
+  #mission {
+    padding: 0 40px;
+    font-size: smaller;
+  }
+
+  /* Show hamburger on small screens */
+  .menu-toggle {
+    display: block;
+    margin: 0;
+  }
+
+  /* Hide nav by default on phones */
+  .navigation_bar {
+    display: none;             /* hidden until we click the button */
+    position: absolute;
+    top: 100%;                 /* just under the fixed header */
+    right: 0;
+    left: 0;
+    width: auto;
+    background: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .section_title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  
+  /* When header has .nav-open, show the menu */
+  header.nav-open .navigation_bar {
+    display: block;
+  }
+
+  /* Vertical links inside the opened menu */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .gallery_grid .gallery_image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .services-container {
+    gap: 1.5em;
+  }
+
+  .service_card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    min-width: 100px
+  }
+
+  .footer-column {
+    min-width: 100px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  
+  header {
+    padding: 0.3rem 0.8rem;
+  }
+
+  .brand .logo {
+    height: 45px;   /* smaller logo on tiny phones */
+    margin: 0;
+  }
+
+  #frontpage {
+    width: 95%;     /* a bit more full width */
+  }
+
+  #mission {
+    padding: 0 10px; /* add padding so text is not glued to edges */
+  }
+
+  #sort {
+    width: 90%;
+  }
+
+  .main_heading {
+    width: 90%;
+  }
+  
+  
 }
