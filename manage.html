@@ -86,26 +86,26 @@
 
       <form class="request-form" action="#" method="post" enctype="multipart/form-data">
         <label for="name">الاسم الكامل</label>
-        <input type="text" id="name" name="name" placeholder="اكتب الاسم الكامل..." required>
+        <input type="text" id="name" name="name" placeholder="اكتب الاسم الكامل..." >
 
         <label for="dob">تاريخ الميلاد</label>
-        <input type="date" id="dob" name="dob" required>
+        <input type="date" id="dob" name="dob" >
 
         <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        <input type="email" id="email" name="email" placeholder="example@email.com" >
 
         <label for="expertise">مجال الخبرة</label>
-        <textarea id="expertise" name="expertise" placeholder="اكتب مجال الخبرة..." rows="3" required></textarea>
+        <textarea id="expertise" name="expertise" placeholder="اكتب مجال الخبرة..." rows="3" ></textarea>
 
         <label for="skills">المهارات</label>
-        <textarea id="skills" name="skills" placeholder="اكتب المهارات..." rows="3" required></textarea>
+        <textarea id="skills" name="skills" placeholder="اكتب المهارات..." rows="3" ></textarea>
 
         <label for="education">المؤهل العلمي</label>
-        <textarea id="education" name="education" placeholder="اكتب المؤهل العلمي..." rows="3" required></textarea>
+        <textarea id="education" name="education" placeholder="اكتب المؤهل العلمي..." rows="3" ></textarea>
 
 
         <label for="photo">الصورة الشخصية</label>
-        <input type="file" id="photo" name="photo" accept="image/*" required>
+        <input type="file" id="photo" name="photo" accept="image/*" >
 
 
         <button type="submit" class="submit-btn">إضافة العضو</button>
@@ -157,7 +157,101 @@
 
     <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
   </footer>
+  <script>
 
+let staffMembers = [
+    { name: "فاطمة الحبشي", img: "images/fatimah.jpg", value: "fatimah" },
+    { name: "رغد القحطاني", img: "images/raghad.jpg", value: "Raghad" },
+    { name: "هيا الهاجري", img: "images/haya.jpg", value: "haya" },
+    { name: "لمى المبارك", img: "images/lama.jpg", value: "lama" }
+];
+
+
+function renderStaff() {
+    const container = document.querySelector(".staff-list");
+    container.innerHTML = "";  
+
+    staffMembers.forEach(member => {
+        const label = document.createElement("label");
+        label.classList.add("staff-item");
+
+        label.innerHTML = `
+            <input type="checkbox" name="staff" value="${member.value}">
+            <img src="${member.img}" alt="${member.name}">
+            <span>${member.name}</span>
+        `;
+        container.appendChild(label);
+        container.appendChild(document.createElement("br"));
+    });
+}
+
+
+renderStaff();
+
+// ----------------------
+// Delete Selected Members
+// ----------------------
+document.querySelector(".request-form button.submit-btn").addEventListener("click", function(e) {
+    e.preventDefault();  // prevent page reload
+
+    let checked = Array.from(document.querySelectorAll("input[name='staff']:checked"));
+
+    if (checked.length === 0) {
+        alert("Please select at least one offer");
+        return;
+    }
+
+    if (confirm("هل أنت متأكد من حذف الأعضاء المحددين؟")) {
+        const valuesToDelete = checked.map(box => box.value);
+
+        // Filter out deleted members
+        staffMembers = staffMembers.filter(member => !valuesToDelete.includes(member.value));
+
+        renderStaff();
+    }
+});
+
+// ----------------------
+// Add New Member
+// ----------------------
+const addForm = document.querySelectorAll(".request-form")[1]; // second form
+
+addForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let dob = document.getElementById("dob").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let expertise = document.getElementById("expertise").value.trim();
+    let skills = document.getElementById("skills").value.trim();
+    let education = document.getElementById("education").value.trim();
+    let photo = document.getElementById("photo").files[0];
+
+    // Validation
+    if (!name || !dob || !email || !expertise || !skills || !education || !photo) {
+        alert("يرجى تعبئة جميع الحقول");
+        return;
+    }
+
+    // Convert image to URL for preview
+    let imgURL = URL.createObjectURL(photo);
+
+    // Add new member to array
+    staffMembers.push({
+        name: name,
+        img: imgURL,
+        value: name.replace(/\s+/g, "_")
+    });
+
+    // Update list
+    renderStaff();
+
+    alert("تم إضافة العضو بنجاح!");
+    addForm.reset();
+});
+
+
+</script>
 </body>
 
 </html>
