@@ -208,6 +208,42 @@
   <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
 </footer>
 
+
+<script>
+// ----------- Load Services from Local Storage -----------
+
+function loadServices() {
+    let container = document.querySelector(".services-container");
+
+    // Empty the page first
+    container.innerHTML = "";
+
+    let services = JSON.parse(localStorage.getItem("providerServices")) || [];
+
+    if (services.length === 0) {
+        container.innerHTML = "<p style='text-align:center; font-size:20px;'>لا توجد خدمات مضافة حتى الآن</p>";
+        return;
+    }
+
+    services.forEach(service => {
+        let card = document.createElement("div");
+        card.classList.add("service_card");
+
+        card.innerHTML = `
+            <img src="${service.img}" class="service_image" alt="Service Image">
+            <h3 class="service_title">${service.name}</h3>
+            <p class="service_description-services">${service.description}</p>
+            <div class="loc-price-container">
+                <p class="price">${service.price}</p>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", loadServices);
+</script>
+
 </body>
 
 </html>

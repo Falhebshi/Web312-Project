@@ -49,23 +49,23 @@
       <form class="request-form" action="#" method="post" enctype="multipart/form-data">
 
         <label for="service-name">اسم الخدمة</label>
-        <input type="text" id="service-name" name="service-name" placeholder="اكتب اسم الخدمة هنا..." required>
+        <input type="text" id="service-name" name="service-name" placeholder="اكتب اسم الخدمة هنا..." >
 
 
         <label for="service-description">وصف الخدمة</label>
         <textarea id="service-description" name="service-description" placeholder="اكتب وصف الخدمة هنا..." rows="5"
-          required></textarea>
+          ></textarea>
 
 
         <label for="service-price">السعر</label>
         <div class="price">
           <input type="number" id="service-price" name="service-price" placeholder="اكتب سعر الخدمة..." min="0"
-            required>
+            >
         </div>
 
 
         <label for="service-photo">صورة الخدمة</label>
-        <input type="file" id="service-photo" name="service-photo" accept="image/*" required>
+        <input type="file" id="service-photo" name="service-photo" accept="image/*" >
 
         <button type="submit" class="submit-btn">إضافة الخدمة</button>
       </form>
@@ -116,6 +116,58 @@
 
     <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
   </footer>
+
+
+ <script>
+// ----------- Save Service with Base64 Image -----------
+
+document.querySelector(".request-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("service-name").value.trim();
+    let description = document.getElementById("service-description").value.trim();
+    let price = document.getElementById("service-price").value.trim();
+    let photo = document.getElementById("service-photo").files[0];
+
+    if (!name || !description || !price || !photo) {
+        alert("يرجى تعبئة جميع الحقول المطلوبة");
+        return;
+    }
+
+    if (/^[0-9]/.test(name)) {
+        alert("اسم الخدمة لا يمكن أن يبدأ برقم");
+        return;
+    }
+
+    if (isNaN(price) || Number(price) <= 0) {
+        alert("السعر يجب أن يكون رقمًا صحيحًا");
+        return;
+    }
+
+    // Convert image to Base64
+    let reader = new FileReader();
+    reader.onload = function() {
+        let base64Image = reader.result;
+
+        let services = JSON.parse(localStorage.getItem("providerServices")) || [];
+
+        services.push({
+            name: name,
+            description: description,
+            price: price,
+            img: base64Image   // <— IMPORTANT
+        });
+
+        localStorage.setItem("providerServices", JSON.stringify(services));
+
+        alert("تم إضافة الخدمة بنجاح: " + name);
+        document.querySelector(".request-form").reset();
+    };
+
+    reader.readAsDataURL(photo);
+});
+</script>
+
 
 </body>
 
