@@ -123,7 +123,7 @@
     </section>      
       <div class="section-wrapper">
 
-    <<section id="gallery" class="sections">
+    <section id="gallery" class="sections">
   <h2 class="section_title">معرض الصور</h2>
 
   <div class="gallery_grid">
@@ -141,6 +141,7 @@
   </div>
 
   <button id="showMoreBtn" class="show-more-btn">عرض المزيد</button>
+  
 </section>
    </div>
   </main>
@@ -189,13 +190,29 @@
     <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
   </footer>
   
-<script>const showMoreBtn = document.getElementById("showMoreBtn");
+<script>
+  const showMoreBtn = document.getElementById("showMoreBtn");
 const hiddenImages = document.querySelectorAll(".gallery_image.hidden");
 
+let expanded = false; // حالة المعرض
+
 showMoreBtn.addEventListener("click", () => {
-  hiddenImages.forEach(img => img.style.display = "block");
-  showMoreBtn.style.display = "none";
+  
+  if (!expanded) {
+    // إظهار الصور
+    hiddenImages.forEach(img => img.style.display = "block");
+    showMoreBtn.textContent = "عرض أقل";
+    expanded = true;
+    
+  } else {
+    // إخفاء الصور الإضافية
+    hiddenImages.forEach(img => img.style.display = "none");
+    showMoreBtn.textContent = "عرض المزيد";
+    expanded = false;
+  }
+
 });
+
 </script>
   <script src="script.js"></script>
 </body>
