@@ -97,7 +97,82 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ===============================
+//       FAVORITE BUTTONS
+// ===============================
+//in favorites page
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector("#favorite-events");
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
+  if (favorites.length === 0) {
+    container.innerHTML += "<p style='text-align:center'>لا توجد فعاليات مفضلة بعد</p>";
+    return;
+  }
 
+  favorites.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("favorite_card");
+    card.innerHTML = `
+      <button class="fav-btn active"><span class="heart"></span></button>
+      <img src="${item.img}" alt="${item.title}" class="event_image">
+      <div class="event_details">
+        <h3 class="event_title">${item.title}</h3>
+        <p>${item.description}</p>
+        <p>السعر: <span class="price">${item.price}</span></p>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  container.addEventListener("click", function(e) {
+    if (e.target.closest(".fav-btn")) {
+      const btn = e.target.closest(".fav-btn");
+      const card = btn.closest(".favorite_card");
+      const title = card.querySelector(".event_title").textContent.trim();
+
+      favorites = favorites.filter(item => item.title !== title);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+
+      card.remove();
+
+      if (favorites.length === 0) {
+        container.innerHTML = "<p style='text-align:center'>لا توجد فعاليات مفضلة بعد</p>";
+      }
+    }
+  });
+});
+
+//in services page
+    document.addEventListener("DOMContentLoaded", function() {
+    const favButtons = document.querySelectorAll(".fav-btn");
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    favButtons.forEach(btn => {
+     const card = btn.closest(".service_card");
+     const title = card.querySelector(".service_title").textContent.trim();
+
+      const isFavorite = favorites.some(item => item.title === title);
+      if (isFavorite) {
+        btn.classList.add("active");
+      }
+
+      btn.addEventListener("click", function() {
+      btn.classList.toggle("active");
+
+      const description = card.querySelector(".service_description-services").textContent.trim();
+      const price = card.querySelector(".price").textContent.trim();
+      const img = card.querySelector(".service_image").getAttribute("src");
+
+      if (btn.classList.contains("active")) {
+        const exists = favorites.some(item => item.title === title);
+        if (!exists) favorites.push({ title, description, price, img });
+      } else {
+        favorites = favorites.filter(item => item.title !== title);
+      }
+
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+     });
+    });
+  });
 
 

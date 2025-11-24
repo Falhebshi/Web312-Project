@@ -1064,25 +1064,27 @@ td ul li ul li {
 
 /* fav button*/
 .fav-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.2s ease;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s ease;
+       position: absolute;
+      top: 10px;
+      right: 10px;
+    }
 
-
+.fav-btn:hover {
+      transform: scale(1.1);
+    }
 .heart {
   width: 14px;
   height: 14px;
@@ -1113,14 +1115,10 @@ td ul li ul li {
   left: 0;
 }
 
-.active-heart .heart,
-.active-heart .heart::before,
-.active-heart .heart::after {
+.fav-btn.active .heart,
+.fav-btn.active .heart::before,
+.fav-btn.active .heart::after {
   background-color: #e63946;
-}
-
-.fav-btn:hover {
-  transform: scale(1.1);
 }
 
 @font-face {
