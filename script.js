@@ -175,4 +175,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+// ===============================
+//      REAL-TIME CLOCK
+// ===============================
+  function updateClock() {
+    const now = new Date();
+
+    // تنسيق الوقت بالعربية
+    const options = {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
+
+    const timeString = now.toLocaleTimeString('ar-SA', options);
+
+    // عرضها داخل الفوتر
+    document.getElementById("realTimeClock").textContent = "الوقت الآن: " + timeString;
+}
+
+// تحديث الساعة كل ثانية
+setInterval(updateClock, 1000);
+
+// تشغيلها بمجرد تحميل الصفحة
+updateClock();
 

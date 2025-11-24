@@ -123,7 +123,7 @@ nav .brand {
 /*-----FOOTER-----*/
 /* Footer container */
 .main-footer {
-  margin: 0;
+  /*margin: 0;*/
   background-color: #f4ece4;
   color: #333;
   border-top: 3px solid #f4ece4;
@@ -137,18 +137,21 @@ nav .brand {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  gap: 25px;
+  /*align-items: flex-start;*/
   flex-wrap: wrap;
-  text-align: right;
+  /*text-align: right;
   gap: 20px;
-  max-width: 1000px;
+  max-width: 1000px;*/
+  max-width: 1200px;
   margin: auto;
 }
 
 .footer-column {
   flex: 1;
-  min-width: 250px;
-  padding: 10px;
+  /*min-width: 250px;
+  padding: 10px;*/
+  min-width: 260px;
   text-align: center;
 }
 
@@ -161,7 +164,8 @@ nav .brand {
 .social-icons,
 .contact-icons {
   display: flex;
-  gap: 20px;
+  /*gap: 20px;*/
+  gap: 15px;
   justify-content: center;
   margin-top: 10px;
 }
@@ -170,13 +174,22 @@ nav .brand {
 .contact-icons img {
   width: 35px;
   height: 35px;
-  /* border-radius: 50; */
-  transition: transform 0.3s ease;
+  /* border-radius: 50; 
+  transition: transform 0.3s ease;*/
+  transition: 0.3s ease;
 }
 
 .social-icons img:hover,
 .contact-icons img:hover {
   transform: scale(1.1);
+}
+
+/* Real-time clock */
+.clock {
+  margin-top: 20px;
+  font-size: 17px;
+  color: #a16f24;
+  font-weight: bold;
 }
 
 .social-icons {
@@ -193,9 +206,26 @@ nav .brand {
 
 /* Bottom copyright line */
 .copyright {
-  margin-top: 25px;
+  /*margin-top: 25px;*/
+  margin-top: 10px;
   font-size: 14px;
   color: #666;
+}
+
+/* ----- MOBILE RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .social-icons, .contact-icons {
+    flex-wrap: wrap;
+  }
 }
 
 /*-----HOMEPAGE-----*/
