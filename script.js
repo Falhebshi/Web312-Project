@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("JS FILE LOADED SUCCESSFULLY");
 /* =============================
      SIMPLE HEADER MENU
    ============================= */
@@ -32,6 +32,9 @@ let cards = [];
 let select;
 
 function sorting() {
+  console.log("sorting ran");
+console.log(select);
+console.log(cards);
   container = document.getElementById("ServicesPageContainer");
   let services = document.getElementsByClassName("service_card");
 
@@ -85,10 +88,16 @@ function sortServices() {
 }
 
 // run after page loads
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function () {
   setupHeader();
-  sorting();
-};
+
+  if (document.getElementById("sortSelect")) {
+    sorting();
+  }
+});
+
+// ===============================
+
 
 
 
