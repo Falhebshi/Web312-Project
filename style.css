@@ -1223,6 +1223,10 @@ td ul li ul li ul li{
     font-size: x-small;
   }
 
+  h2.section_title{
+    margin: 0;
+  }
+
    header {
     position: fixed;
     top: 0;
@@ -1298,14 +1302,16 @@ td ul li ul li ul li{
     height: auto;
   }
 
-  .services-container {
-    gap: 1.5em;
-  }
-
-  .service_card {
-    width: 90%;
-    max-width: 320px;
-  }
+      .service_card {
+    width: 95%;
+    max-width: 300px;
+    padding: 1rem;
+    }
+    .service_image {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    }
 
   .footer-container {
     flex-direction: row;
@@ -1354,7 +1360,36 @@ td ul li ul li ul li{
   .main_heading {
     width: 90%;
   }
-  
+
+
+  .services-container {
+gap: 1.2em;
+padding: 0 0.5em;
+}
+.service_card {
+width: 90%;
+max-width: 260px;
+padding: 0.8rem;
+margin: 0 auto;
+}
+.service_image {
+width: 100%;
+max-width: 220px;
+height: auto;
+}
+.service_title {
+font-size: 1rem;
+}
+
+.service_description-services {
+font-size: 0.85rem;
+}
+
+.loc-price-container,
+.price,
+.counter-container {
+font-size: 0.9rem;
+}
   
 }
 
