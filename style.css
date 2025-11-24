@@ -714,6 +714,13 @@ color:orange;}
   color: #333;
 }
 
+@media (max-width: 768px) {
+  .breadcrumb {
+    margin-top: 90px;
+  }
+}
+
+
 /* Request form section */
 .request-section {
   width: 70%;
@@ -816,6 +823,14 @@ input[type="date"] {
   resize: none;
 }
 
+.rating {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap; 
+}
+
 .rating img.star {
   width: 50px;
   cursor: pointer;
@@ -824,6 +839,15 @@ input[type="date"] {
 
 .rating img.star:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .rating img.star {
+    width: 35px;
+  }
+  .rating {
+    gap: 2px;
+  }
 }
 
 .submit-btn {
@@ -851,6 +875,7 @@ input[type="date"] {
 .rating span:hover {
   transform: scale(1.2);
 }
+
 
 
 hr#section {
