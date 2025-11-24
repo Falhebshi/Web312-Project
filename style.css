@@ -137,7 +137,7 @@ nav .brand {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 20px;
   /*align-items: flex-start;*/
   flex-wrap: wrap;
   /*text-align: right;
@@ -716,7 +716,7 @@ color:orange;}
 
 @media (max-width: 768px) {
   .breadcrumb {
-    margin-top: 90px;
+    margin-top: 80px;
   }
 }
 
