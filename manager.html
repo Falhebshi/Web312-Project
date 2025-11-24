@@ -210,12 +210,10 @@
 
 
 <script>
-// ----------- Load Services from Local Storage -----------
+// ----------- Load Services + Delete Service -----------
 
 function loadServices() {
     let container = document.querySelector(".services-container");
-
-    // Empty the page first
     container.innerHTML = "";
 
     let services = JSON.parse(localStorage.getItem("providerServices")) || [];
@@ -225,24 +223,44 @@ function loadServices() {
         return;
     }
 
-    services.forEach(service => {
+    services.forEach((service, index) => {
         let card = document.createElement("div");
         card.classList.add("service_card");
 
         card.innerHTML = `
-            <img src="${service.img}" class="service_image" alt="Service Image">
-            <h3 class="service_title">${service.name}</h3>
-            <p class="service_description-services">${service.description}</p>
-            <div class="loc-price-container">
-                <p class="price">${service.price}</p>
-            </div>
-        `;
+    <img src="${service.img}" class="service_image" alt="Service Image">
+    <h3 class="service_title">${service.name}</h3>
+    <p class="service_description-services">${service.description}</p>
+    <div class="loc-price-container">
+        <p class="price">${service.price}</p>
+    </div>
+
+    <button class="delete-btn" data-index="${index}">
+        حذف الخدمة
+    </button>
+`;
+
+
         container.appendChild(card);
+    });
+
+    // Add delete function
+    document.querySelectorAll(".delete-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            let index = this.dataset.index;
+
+            if (confirm("هل تريد حذف هذه الخدمة؟")) {
+                services.splice(index, 1);  
+                localStorage.setItem("providerServices", JSON.stringify(services));
+                loadServices();  
+            }
+        });
     });
 }
 
 document.addEventListener("DOMContentLoaded", loadServices);
 </script>
+
 
 </body>
 

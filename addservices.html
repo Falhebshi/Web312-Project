@@ -59,8 +59,8 @@
 
         <label for="service-price">السعر</label>
         <div class="price">
-          <input type="number" id="service-price" name="service-price" placeholder="اكتب سعر الخدمة..." min="0"
-            >
+          <input type="text" id="service-price" name="service-price" class="price-input" placeholder="اكتب سعر الخدمة...">
+
         </div>
 
 
@@ -118,7 +118,7 @@
   </footer>
 
 
- <script>
+<script>
 // ----------- Save Service with Base64 Image -----------
 
 document.querySelector(".request-form").addEventListener("submit", function(e) {
@@ -128,6 +128,8 @@ document.querySelector(".request-form").addEventListener("submit", function(e) {
     let description = document.getElementById("service-description").value.trim();
     let price = document.getElementById("service-price").value.trim();
     let photo = document.getElementById("service-photo").files[0];
+
+    // ----------- Validation -----------
 
     if (!name || !description || !price || !photo) {
         alert("يرجى تعبئة جميع الحقول المطلوبة");
@@ -139,12 +141,14 @@ document.querySelector(".request-form").addEventListener("submit", function(e) {
         return;
     }
 
-    if (isNaN(price) || Number(price) <= 0) {
-        alert("السعر يجب أن يكون رقمًا صحيحًا");
+    // price must be a number via JavaScript only
+    if (isNaN(price)) {
+        alert("السعر يجب أن يكون رقمًا فقط");
         return;
     }
 
-    // Convert image to Base64
+    // ----------- Convert image to Base64 -----------
+
     let reader = new FileReader();
     reader.onload = function() {
         let base64Image = reader.result;
@@ -155,7 +159,7 @@ document.querySelector(".request-form").addEventListener("submit", function(e) {
             name: name,
             description: description,
             price: price,
-            img: base64Image   // <— IMPORTANT
+            img: base64Image
         });
 
         localStorage.setItem("providerServices", JSON.stringify(services));
@@ -167,6 +171,7 @@ document.querySelector(".request-form").addEventListener("submit", function(e) {
     reader.readAsDataURL(photo);
 });
 </script>
+
 
 
 </body>
