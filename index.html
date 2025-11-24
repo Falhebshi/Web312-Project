@@ -43,6 +43,8 @@
     <h2 id="mission-title">مهمتنا</h2>
     <p id="mission">توفير منصة سهلة الاستخدام وآمنة وموثوقة تربط بين العملاء ومزودي الخدمات في المملكة العربية السعودية.
       نسعى لتبسيط عملية العثور على الخدمات وحجزها، مع ضمان تجربة سلسة لكل من العملاء ومزودي الخدمات.</p>
+
+      <div class="section-wrapper">
     <section id='popular-services' class="sections">
       <h2 class="section_title">الأكثر طلبًا</h2>
 
@@ -89,7 +91,8 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section></div>
+
 
     <section id='reviews' class="sections">
       <h2 class="section_title">تعليقات عملاءنا</h2>
@@ -117,21 +120,29 @@
         <p class="reviewer_service">ركوب الخيل</p>
         <p class="review_text">"أنصح بشدة باستخدام تذكار لأي شخص<br> يبحث عن خدمات موثوقة."</p>
       </div>
-    </section>
-    <section id="gallery" class="sections">
-      <h2 class="section_title">معرض الصور</h2>
-      <div class="gallery_grid">
-        <img src="images/horse_riding_gallery.jpg" alt="Two girls riding horses" class="gallery_image">
-        <img src="images/marathon_gallery.jpg" alt="Marathon runner" class="gallery_image">
-        <img src="images/kids_at_waterpark.jpg" alt="Kids playing at a waterpark" class="gallery_image">
-        <img src="images/playground.jpg" alt="Kids playing at a playground" class="gallery_image">
-        <img src="images/oud_concert.png" alt="oud concert" class="gallery_image">
-        <img src="images/kids_painting_workshop.jpg" alt="kids in a painting workshop" class="gallery_image">
-        <img src="images/girl_father_atzoo.png" alt="A father and his daughter at the zoo" class="gallery_image">
-        <img src="images/pic_at_maraya.jpg" alt="A couple taking a picture at Maraya AlUla" class="gallery_image">
-        <img src="images/food.jpeg" alt="Lady cooking traditional food" class="gallery_image">
-      </div>
-    </section>
+    </section>      
+      <div class="section-wrapper">
+
+    <<section id="gallery" class="sections">
+  <h2 class="section_title">معرض الصور</h2>
+
+  <div class="gallery_grid">
+    <img src="images/horse_riding_gallery.jpg" class="gallery_image visible">
+    <img src="images/marathon_gallery.jpg" class="gallery_image visible">
+    <img src="images/kids_at_waterpark.jpg" class="gallery_image visible">
+
+    <!-- باقي الصور تبدأ مخفية -->
+    <img src="images/playground.jpg" class="gallery_image hidden">
+    <img src="images/oud_concert.png" class="gallery_image hidden">
+    <img src="images/kids_painting_workshop.jpg" class="gallery_image hidden">
+    <img src="images/girl_father_atzoo.png" class="gallery_image hidden">
+    <img src="images/pic_at_maraya.jpg" class="gallery_image hidden">
+    <img src="images/food.jpeg" class="gallery_image hidden">
+  </div>
+
+  <button id="showMoreBtn" class="show-more-btn">عرض المزيد</button>
+</section>
+   </div>
   </main>
 
   <!-- Footer -->
@@ -177,7 +188,15 @@
 
     <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
   </footer>
+  
+<script>const showMoreBtn = document.getElementById("showMoreBtn");
+const hiddenImages = document.querySelectorAll(".gallery_image.hidden");
 
+showMoreBtn.addEventListener("click", () => {
+  hiddenImages.forEach(img => img.style.display = "block");
+  showMoreBtn.style.display = "none";
+});
+</script>
   <script src="script.js"></script>
 </body>
 

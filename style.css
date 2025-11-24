@@ -1373,3 +1373,33 @@ td ul li ul li ul li{
 .price-input:focus {
     border-color: #8a5e1f;
 }
+
+.section-wrapper {
+  border: 1px solid #ddd;
+  padding: 4px 25px 25px 25px;
+  border-radius: 12px;
+  background-color: #f4ece4;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+
+.gallery_image.hidden {
+  display: none;
+}
+
+.show-more-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #d4b89f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.show-more-btn:hover {
+  background-color: #c9a98d;
+}
