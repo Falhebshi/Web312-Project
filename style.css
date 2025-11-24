@@ -228,6 +228,17 @@ nav .brand {
   }
 }
 
+  .social-icons img,
+  .contact-icons img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social-icons,
+  .contact-icons {
+    gap: 10px;
+  }
+
 /*-----HOMEPAGE-----*/
 #frontpage {
   /* Main image on homepage */
