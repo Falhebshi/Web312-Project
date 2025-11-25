@@ -581,7 +581,7 @@ color:orange;}
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  width: 30%;
+  width: 35%;
   flex-wrap: wrap;
   min-width: 230px;
   margin: 15px 30px;
@@ -1501,30 +1501,4 @@ font-size: 0.9rem;
 
 .show-more-btn:hover {
   background-color: #c9a98d;
-}
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 25px; 
-  z-index: 9999;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-
-  /* left: 50%;
-  transform: translateX(-50%); */
-}
-
-#myBtn .up-img {
-  width: 50px;     
-  height: 50px;
-}
-
-#myBtn:hover .up-img {
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-  transition: 0.2s ease;
 }

@@ -45,24 +45,25 @@
       <form class="evaluation-form" action="#" method="post">
         <label for="event" >اختر الفعالية السابقة:</label>
         <select id="event" name="event">
-          <option>رحلة منطاد العلا</option>
-          <option>المسار الرياضي</option>
+          <option value="">اختر الخدمة...</option>
+          <option value="val1">رحلة منطاد العلا</option>
+          <option value="val2">المسار الرياضي</option>
         </select>
 
         <label>التقييم:</label>
         <div class="rating" id="starRating">
-          <img src="images/graystar.png" alt="star1" class="star">
-          <img src="images/graystar.png" alt="star2" class="star">
-          <img src="images/graystar.png" alt="star3" class="star">
-          <img src="images/graystar.png" alt="star4" class="star">
-          <img src="images/graystar.png" alt="star5" class="star">
+          <img src="images/graystar.png" alt="star1" class="star" data-index="1">
+          <img src="images/graystar.png" alt="star2" class="star" data-index="2">
+          <img src="images/graystar.png" alt="star3" class="star" data-index="3">
+          <img src="images/graystar.png" alt="star4" class="star" data-index="4">
+          <img src="images/graystar.png" alt="star5" class="star" data-index="5">
         </div>
 <input type="hidden" id="ratingValue" name="ratingValue">
 
 
 
         <label for="feedback">التعليقات والملاحظات:</label>
-        <textarea id="feedback" name="feedback" placeholder="اكتب تعليقك هنا..." rows="5" required></textarea>
+        <textarea id="feedback" name="feedback" placeholder="اكتب تعليقك هنا..." rows="5"></textarea>
 
         <button type="submit" class="submit-btn">إرسال</button>
       </form>

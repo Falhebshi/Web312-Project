@@ -40,31 +40,32 @@
     <section class="request-section">
       <h1 class="main_heading">طلب فعالية </h1>
 
-      <form class="request-form" action="#" method="post">
+      <form class="request-form">
         <label for="event">اختر الفعالية:</label>
         <select id="event" name="event">
-          <option>رحلة منطاد العلا</option>
-          <option>ورشة فخار</option>
-          <option>التزلج الهوائي</option>
-          <option>ورشة الخوص</option>
-          <option>صناعة العطور العربية</option>
-          <option>ورشة السدو</option>
-          <option>ورشة الطهي الشعبي</option>
-          <option>ركوب الخيل</option>
-          <option>المسار الرياضي</option>
+          <option value="">اختر الفعالية...</option>
+          <option value="رحلة منطاد العلا">رحلة منطاد العلا</option>
+          <option value="ورشة فخار">ورشة فخار</option>
+          <option value="التزلج الهوائي">التزلج الهوائي</option>
+          <option value="ورشة الخوص">ورشة الخوص</option>
+          <option value="صناعة العطور العربية">صناعة العطور العربية</option>
+          <option value="ورشة السدو">ورشة السدو</option>
+          <option value="ورشة الطهي الشعبي">ورشة الطهي الشعبي</option>
+          <option value="ركوب الخيل">ركوب الخيل</option>
+          <option value="المسار الرياضي">المسار الرياضي</option>
         </select>
 
         <label for="username">اسم العميل:</label>
-        <input type="text" id="username" name="username" placeholder="اكتب اسمك هنا..." required>
+        <input type="text" id="username" name="username" placeholder="اكتب اسمك هنا...">
 
         <label for="date">تاريخ الفعالية:</label>
-<input type="date" id="date" name="date" lang="ar" dir="rtl" required>
+<input type="date" id="date" name="date" lang="ar" dir="rtl">
 <p id="arabicDate" style="margin-top:8px; font-weight:bold; color:#b07a28;">اليوم / الشهر / السنة</p>
 
 
 
         <label for="description">وصف الطلب:</label>
-        <textarea id="description" name="description" placeholder="اكتب الوصف هنا..." rows="5" required></textarea>
+        <textarea id="description" name="description" placeholder="اكتب الوصف هنا..." rows="5"></textarea>
 
         <button type="submit" class="submit-btn">إرسال</button>
       </form>
