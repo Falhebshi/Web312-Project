@@ -1502,3 +1502,65 @@ font-size: 0.9rem;
 .show-more-btn:hover {
   background-color: #c9a98d;
 }
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  z-index: 9999;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+
+#myBtn .up-img {
+  width: 50px;     
+  height: 50px;
+}
+
+/* Default size */
+#myBtn .up-img {
+  width: 50px;
+  height: 50px;
+}
+
+#myBtn:hover .up-img {
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
+
+
+@media (max-width: 480px) {
+  #myBtn {
+    bottom: 15px;
+    right: 15px;
+  }
+  #myBtn .up-img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  #myBtn {
+    bottom: 18px;
+    right: 18px;
+  }
+  #myBtn .up-img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #myBtn .up-img {
+    width: 55px;
+    height: 55px;
+  }
+}
