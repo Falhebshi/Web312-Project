@@ -2093,3 +2093,7 @@ body.blue-mode .counter-container {
 body.blue-mode #myBtn .up-img {
   filter: brightness(0.98);
 }
+
+body.blue-mode #frontpage {
+    content: url("images/frontpage-light.png");
+}
