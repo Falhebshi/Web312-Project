@@ -553,7 +553,7 @@ p span.price {
   width: 30px;
   height: 30px;
   display: inline-block;
-  background-image: url("images/fireViral.jpg");
+  background-image: url("images/fireViral.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1783,3 +1783,47 @@ body.dark-mode .staff-item {
   }
 }
  */
+
+ /* DARK MODE IMAGE SWITCH  */
+body.dark-mode .theme-img.logo {
+    content: url("images/logo-white.png");
+}
+
+
+body.dark-mode .price::after {
+  background-image: url("images/riyal-white.png") !important;
+}
+
+
+body.dark-mode .theme-img.twitter {
+    content: url("images/twitter-x-white.svg");
+}
+
+body.dark-mode .theme-img.instagram {
+    content: url("images/instagram-white.svg");
+}
+
+body.dark-mode .theme-img.snapchat {
+    content: url("images/snapchat-white.svg");
+}
+
+body.dark-mode .theme-img.email {
+    content: url("images/email-white.svg");
+}
+
+body.dark-mode .theme-img.telephone {
+    content: url("images/telephone-white.svg");
+}
+
+body.dark-mode .counter-container::after {
+  background-image: url("images/fire-white.svg") !important;
+}
+
+
+body.dark-mode .reviewer_name::before {
+  content: url("images/person-circle-white.svg") !important;
+}
+
+body.dark-mode .location::before {
+  content: url("images/geo-alt-fill-white.svg") !important;
+}
