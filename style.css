@@ -1766,3 +1766,44 @@ body.dark-mode .staff-item {
     height: 25px;
   }
 }
+
+/* ======= THEME BUTTON CENTER ON MOBILE ONLY ======= */
+/* @media (max-width: 480px) {
+  .theme-btn {
+    position: absolute;
+    left: 50% !important;       
+    top: 8px !important;       
+    transform: translateX(-50%) !important;
+    z-index: 1000;
+  }
+
+  .theme-btn img {
+    width: 28px;
+    height: 28px;
+  }
+}*/
+
+/* Theme button next to menu-toggle on all mobile sizes */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    position: relative; /* keep original responsive behavior */
+    z-index: 1001;
+  }
+
+  .theme-btn {
+    position: absolute;
+    right: 50px;              /* always next to the menu button */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 5px;
+    z-index: 1000;
+  }
+
+  .theme-btn img {
+    width: 26px;
+    height: 26px;
+  }
+}
