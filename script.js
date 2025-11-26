@@ -582,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //      SIMPLE DARK MODE
 // ===============================
 
-// Apply dark mode immediately (before page loads)
+/* // Apply dark mode immediately (before page loads)
 (function() {
   if (localStorage.getItem("darkMode") === "enabled") {
     document.documentElement.classList.add("dark-mode");
@@ -607,4 +607,66 @@ function toggleDarkMode() {
   } else {
     localStorage.setItem("darkMode", "disabled");
   }
+} */
+// ===============================
+//    3-THEME TOGGLE SYSTEM
+// ===============================
+
+// Apply saved theme immediately
+(function() {
+  const theme = localStorage.getItem("theme") || "light";
+  document.body.classList.add(theme + "-mode");
+})();
+
+// Toggle between 3 themes
+function toggleDarkMode() {
+  const body = document.body;
+  const currentTheme = getCurrentTheme();
+  
+  // Remove all theme classes
+  body.classList.remove("light-mode", "dark-mode", "blue-mode");
+  
+  // Cycle through themes: light → blue → dark → light
+  let newTheme;
+  if (currentTheme === "light") {
+    newTheme = "blue";
+  } else if (currentTheme === "blue") {
+    newTheme = "dark";
+  } else {
+    newTheme = "light";
+  }
+  
+  body.classList.add(newTheme + "-mode");
+  localStorage.setItem("theme", newTheme);
+  
+  updateThemeIcon(newTheme);
 }
+
+// Get current theme
+function getCurrentTheme() {
+  if (document.body.classList.contains("dark-mode")) return "dark";
+  if (document.body.classList.contains("blue-mode")) return "blue";
+  return "light";
+}
+
+// Update theme button icon
+function updateThemeIcon(theme) {
+  const themeBtn = document.getElementById("themeBtn");
+  if (!themeBtn) return;
+  
+  const icon = themeBtn.querySelector("img");
+  
+  if (theme === "light") {
+    icon.src = "images/moon icon.png"; // Moon for light mode
+  } else if (theme === "blue") {
+    icon.src = "images/sun icon.png"; // Sun for blue mode (optional)
+  } else {
+    icon.src = "images/sun icon.png"; // Sun for dark mode
+  }
+}
+
+// Initialize icon on page load
+document.addEventListener("DOMContentLoaded", function() {
+  const theme = getCurrentTheme();
+  updateThemeIcon(theme);
+});
