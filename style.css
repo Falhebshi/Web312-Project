@@ -1503,64 +1503,62 @@ font-size: 0.9rem;
   background-color: #c9a98d;
 }
 
+/* Back to Top Button */
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 20px; 
+  bottom: 22px;
+  right: 22px;
   z-index: 9999;
   border: none;
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-
-  /* left: 50%;
-  transform: translateX(-50%); */
 }
-
+/* -------- DEFAULT LAPTOP / DESKTOP -------- */
 #myBtn .up-img {
-  width: 50px;     
-  height: 50px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* Default size */
-#myBtn .up-img {
-  width: 50px;
-  height: 50px;
+/* Bigger buttons on high-DPI laptops */
+@media (min-resolution: 150dpi) {
+  #myBtn .up-img { width: 65px; height: 65px; }
+}
+@media (min-resolution: 200dpi) {
+  #myBtn .up-img { width: 75px; height: 75px; }
 }
 
-#myBtn:hover .up-img {
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-  transition: 0.2s ease;
-}
-
-
-@media (max-width: 480px) {
-  #myBtn {
-    bottom: 15px;
-    right: 15px;
-  }
+/* -------- PHONES PORTRAIT -------- */
+@media (max-width: 600px) and (orientation: portrait) {
   #myBtn .up-img {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
   }
 }
 
-@media (max-width: 768px) {
-  #myBtn {
-    bottom: 18px;
-    right: 18px;
-  }
+/* -------- PHONES LANDSCAPE (working version) -------- */
+@media (max-width: 900px) and (orientation: landscape) {
   #myBtn .up-img {
-    width: 55px;
-    height: 55px;
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
-@media (min-width: 1200px) {
+/* -------- iPads Portrait & Landscape -------- */
+@media (min-width: 768px) and (max-width: 1024px) {
   #myBtn .up-img {
-    width: 55px;
-    height: 55px;
+    width: 75px !important;
+    height: 75px !important;
+  }
+}
+
+/* -------- iPad Pro -------- */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #myBtn .up-img {
+    width: 85px !important;
+    height: 85px !important;
   }
 }
