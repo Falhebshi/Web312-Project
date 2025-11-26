@@ -1531,8 +1531,8 @@ font-size: 0.9rem;
 /* Phones smaller screens */
 @media (max-width: 480px) {
   #myBtn .up-img {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
   }
 }
 
