@@ -1523,11 +1523,12 @@ font-size: 0.9rem;
   object-fit: cover;
 }
 
-/* Bigger buttons on high-DPI laptops */
-@media (min-resolution: 150dpi) {
+/* -------- HIGH DPI LAPTOPS ONLY (NOT TABLETS) -------- */
+@media (min-resolution: 150dpi) and (min-width: 1025px) {
   #myBtn .up-img { width: 65px; height: 65px; }
 }
-@media (min-resolution: 200dpi) {
+
+@media (min-resolution: 200dpi) and (min-width: 1025px) {
   #myBtn .up-img { width: 75px; height: 75px; }
 }
 
@@ -1539,7 +1540,7 @@ font-size: 0.9rem;
   }
 }
 
-/* -------- PHONES LANDSCAPE (working version) -------- */
+/* -------- PHONES LANDSCAPE -------- */
 @media (max-width: 900px) and (orientation: landscape) {
   #myBtn .up-img {
     width: 40px !important;
@@ -1547,18 +1548,19 @@ font-size: 0.9rem;
   }
 }
 
-/* -------- iPads Portrait & Landscape -------- */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* ---------------- iPAD AIR (CUSTOM SIZE – FIXED) ---------------- */
+/* Portrait */
+@media (min-width: 768px) and (max-width: 900px) and (orientation: portrait) {
   #myBtn .up-img {
-    width: 55px !important;
-    height: 55px !important;
+    width: 60px !important;
+    height: 60px !important;
   }
 }
 
-/* -------- iPad Pro -------- */
-@media (min-width: 1024px) and (max-width: 1366px) {
+/* Landscape */
+@media (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
   #myBtn .up-img {
-    width: 55px !important;
-    height: 55px !important;
+    width: 60px !important;
+    height: 60px !important;
   }
 }
