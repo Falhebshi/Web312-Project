@@ -1550,15 +1550,15 @@ font-size: 0.9rem;
 /* -------- iPads Portrait & Landscape -------- */
 @media (min-width: 768px) and (max-width: 1024px) {
   #myBtn .up-img {
-    width: 75px !important;
-    height: 75px !important;
+    width: 65px !important;
+    height: 65px !important;
   }
 }
 
 /* -------- iPad Pro -------- */
 @media (min-width: 1024px) and (max-width: 1366px) {
   #myBtn .up-img {
-    width: 85px !important;
-    height: 85px !important;
+    width: 75px !important;
+    height: 75px !important;
   }
 }
