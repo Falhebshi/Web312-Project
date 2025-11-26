@@ -1522,40 +1522,10 @@ font-size: 0.9rem;
   transform: scale(1.05);
   transition: 0.2s ease;
 }
-/* Default size (phones & tablets) */
+
 #myBtn .up-img {
-  width: 55px;
-  height: 55px;
-}
-
-/* Phones smaller screens */
-@media (max-width: 480px) {
-  #myBtn .up-img {
-    width: 55px;
-    height: 55px;
-  }
-}
-
-/* Tablets (including iPad 7th, iPad Air, Samsung Tab) */
-@media (min-width: 600px) and (max-width: 1024px) {
-  #myBtn .up-img {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-/* Large Tablets & iPad Pro (Portrait + Landscape) */
-@media (min-width: 1025px) and (max-width: 1366px) {
-  #myBtn .up-img {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-/* Desktops */
-@media (min-width: 1367px) {
-  #myBtn .up-img {
-    width: 65px;
-    height: 65px;
-  }
+  width: clamp(45px, 6vw, 80px);
+  height: clamp(45px, 6vw, 80px);
+  border-radius: 50%;
+  object-fit: cover;
 }
