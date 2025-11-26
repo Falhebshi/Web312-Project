@@ -578,3 +578,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ===============================
+//      SIMPLE DARK MODE
+// ===============================
+
+// Apply dark mode immediately (before page loads)
+(function() {
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.documentElement.classList.add("dark-mode");
+    document.body.classList.add("dark-mode");
+  }
+})();
+
+// Also check when DOM is ready
+document.addEventListener("DOMContentLoaded", function() {
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+  }
+});
+
+// Toggle dark mode function
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  
+  // Save to localStorage
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", "disabled");
+  }
+}
