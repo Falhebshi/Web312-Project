@@ -1524,8 +1524,8 @@ font-size: 0.9rem;
 }
 
 #myBtn .up-img {
-  width: clamp(45px, 6vw, 80px);
-  height: clamp(45px, 6vw, 80px);
+  width: clamp(50px, 4vw, 75px);
+  height: clamp(50px, 4vw, 75px);
   border-radius: 50%;
   object-fit: cover;
 }
