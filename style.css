@@ -1558,7 +1558,7 @@ font-size: 0.9rem;
 /* -------- iPad Pro -------- */
 @media (min-width: 1024px) and (max-width: 1366px) {
   #myBtn .up-img {
-    width: 75px !important;
-    height: 75px !important;
+    width: 65px !important;
+    height: 65px !important;
   }
 }
