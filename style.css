@@ -1758,9 +1758,9 @@ body.dark-mode .staff-item {
 
 @media (max-width: 480px) {
   .theme-btn {
-    left: 0.8rem;
+    left: 4.25rem;
   }
-  
+
   .theme-btn img {
     width: 25px;
     height: 25px;
@@ -1768,7 +1768,7 @@ body.dark-mode .staff-item {
 }
 
 /* ======= THEME BUTTON CENTER ON MOBILE ONLY ======= */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .theme-btn {
     position: absolute;
     left: 50% !important;       
@@ -1782,3 +1782,4 @@ body.dark-mode .staff-item {
     height: 28px;
   }
 }
+ */
