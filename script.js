@@ -670,3 +670,99 @@ document.addEventListener("DOMContentLoaded", function() {
   const theme = getCurrentTheme();
   updateThemeIcon(theme);
 });
+
+/* =========================================================
+   SERVICE COUNTERS SYSTEM (English Numbers Only)
+   ========================================================= */
+
+// ---- Load counters from localStorage ----
+function getServiceCounters() {
+    return JSON.parse(localStorage.getItem("serviceCounters")) || {};
+}
+
+function saveServiceCounters(obj) {
+    localStorage.setItem("serviceCounters", JSON.stringify(obj));
+}
+
+/* =========================================================
+   (1) INCREMENT COUNTER WHEN A SERVICE IS REQUESTED
+   ========================================================= */
+function saveRequest(serviceName, user, date, desc) {
+
+    let counters = getServiceCounters();
+
+    // If first time → initialize
+    if (!counters[serviceName]) {
+        counters[serviceName] = 0;
+    }
+
+    // Increment counter
+    counters[serviceName]++;
+
+    // Save back
+    saveServiceCounters(counters);
+
+    // Your existing request-saving code continues normally...
+}
+
+/* =========================================================
+   (2) SHOW COUNTERS ON SERVICES PAGE IN ENGLISH NUMBERS
+   ========================================================= */
+function applyServiceCounters() {
+    const cards = document.querySelectorAll(".service_card");
+    let counters = getServiceCounters();
+
+    cards.forEach(card => {
+        const title = card.querySelector(".service_title").textContent.trim();
+        const counterBox = card.querySelector(".counter-container .count");
+
+        if (counterBox) {
+            let count = counters[title] || 0;
+            counterBox.textContent = count; // English digits only
+        }
+    });
+
+    highlightTopThree();
+}
+
+/* =========================================================
+   (3) HIGHLIGHT TOP 3 MOST REQUESTED SERVICES
+   ========================================================= */
+function highlightTopThree() {
+    const cards = document.querySelectorAll(".service_card");
+    let counters = getServiceCounters();
+
+    // Convert to array → sort by highest count
+    let sorted = Object.entries(counters)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3);
+
+    // Names of the top 3 services
+    let topThree = sorted.map(entry => entry[0]);
+
+    cards.forEach(card => {
+        const title = card.querySelector(".service_title").textContent.trim();
+        const counterContainer = card.querySelector(".counter-container");
+
+        // Remove old viral flames
+        counterContainer.classList.remove("viral");
+
+        // Add flame to top 3
+        if (topThree.includes(title)) {
+            counterContainer.classList.add("viral");
+        }
+    });
+}
+
+/* =========================================================
+   RUN ONLY ON services.html
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", function () {
+    const isServicesPage = document.body.contains(
+        document.querySelector("#ServicesPageContainer")
+    );
+
+    if (isServicesPage) {
+        applyServiceCounters();
+    }
+});
