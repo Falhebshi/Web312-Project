@@ -655,13 +655,15 @@ function updateThemeIcon(theme) {
   if (!themeBtn) return;
   
   const icon = themeBtn.querySelector("img");
+
+  
   
   if (theme === "light") {
-    icon.src = "images/moon icon.png"; // Moon for light mode
+    icon.src = "images/light theme.png"; // Moon for light mode
   } else if (theme === "blue") {
-    icon.src = "images/sun icon.png"; // Sun for blue mode (optional)
+    icon.src = "images/dark theme.png"; // Sun for blue mode (optional)
   } else {
-    icon.src = "images/sun icon.png"; // Sun for dark mode
+    icon.src = "images/Biege theme.png"; // Sun for dark mode
   }
 }
 
