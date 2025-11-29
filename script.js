@@ -335,7 +335,7 @@ requestForm.addEventListener("submit", function (e) {
     const nameParts = username.split(" ");
 
     if (nameParts.length < 2) {
-        alert("الرجاء كتابة الاسم الكامل (اسم + اسم عائلة).");
+        alert("الرجاء كتابة الاسم الكامل (الاسم + اسم العائلة).");
         return;
     }
 
@@ -457,8 +457,15 @@ function getServiceDetails(name) {
 //       SAVE REQUEST
 // ==========================
 function saveRequest(eventName, username, date, description) {
+    // Increment service counter
+   let counters = JSON.parse(localStorage.getItem("serviceCounters")) || {};
+    if (!counters[eventName]) {
+        counters[eventName] = 0;
+    }
+    counters[eventName]++;
+    localStorage.setItem("serviceCounters", JSON.stringify(counters)); 
 
-    // Get service details
+    // Get service details for save request an order info
     const service = getServiceDetails(eventName);
 
     let reqs = JSON.parse(localStorage.getItem("requests")) || [];
@@ -579,39 +586,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ===============================
-//      SIMPLE DARK MODE
+//       DARK MODE TOGGLE
 // ===============================
-
-/* // Apply dark mode immediately (before page loads)
-(function() {
-  if (localStorage.getItem("darkMode") === "enabled") {
-    document.documentElement.classList.add("dark-mode");
-    document.body.classList.add("dark-mode");
-  }
-})();
-
-// Also check when DOM is ready
-document.addEventListener("DOMContentLoaded", function() {
-  if (localStorage.getItem("darkMode") === "enabled") {
-    document.body.classList.add("dark-mode");
-  }
-});
-
-// Toggle dark mode function
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-  
-  // Save to localStorage
-  if (document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("darkMode", "enabled");
-  } else {
-    localStorage.setItem("darkMode", "disabled");
-  }
-} */
-// ===============================
-//    3-THEME TOGGLE SYSTEM
-// ===============================
-
 // Apply saved theme immediately
 (function() {
   const theme = localStorage.getItem("theme") || "light";
@@ -661,7 +637,7 @@ function updateThemeIcon(theme) {
   if (theme === "light") {
     icon.src = "images/light theme.png"; // Moon for light mode
   } else if (theme === "blue") {
-    icon.src = "images/dark theme.png"; // Sun for blue mode (optional)
+    icon.src = "images/dark theme.png"; // Sun for blue mode 
   } else {
     icon.src = "images/Biege theme.png"; // Sun for dark mode
   }
@@ -677,7 +653,7 @@ document.addEventListener("DOMContentLoaded", function() {
    SERVICE COUNTERS SYSTEM (English Numbers Only)
    ========================================================= */
 
-// ---- Load counters from localStorage ----
+// Load counters from localStorage 
 function getServiceCounters() {
     return JSON.parse(localStorage.getItem("serviceCounters")) || {};
 }
@@ -687,28 +663,7 @@ function saveServiceCounters(obj) {
 }
 
 /* =========================================================
-   (1) INCREMENT COUNTER WHEN A SERVICE IS REQUESTED
-   ========================================================= */
-function saveRequest(serviceName, user, date, desc) {
-
-    let counters = getServiceCounters();
-
-    // If first time → initialize
-    if (!counters[serviceName]) {
-        counters[serviceName] = 0;
-    }
-
-    // Increment counter
-    counters[serviceName]++;
-
-    // Save back
-    saveServiceCounters(counters);
-
-    // Your existing request-saving code continues normally...
-}
-
-/* =========================================================
-   (2) SHOW COUNTERS ON SERVICES PAGE IN ENGLISH NUMBERS
+     SHOW COUNTERS ON SERVICES PAGE IN ENGLISH NUMBERS
    ========================================================= */
 function applyServiceCounters() {
     const cards = document.querySelectorAll(".service_card");
@@ -728,7 +683,7 @@ function applyServiceCounters() {
 }
 
 /* =========================================================
-   (3) HIGHLIGHT TOP 3 MOST REQUESTED SERVICES
+     HIGHLIGHT TOP 3 MOST REQUESTED SERVICES
    ========================================================= */
 function highlightTopThree() {
     const cards = document.querySelectorAll(".service_card");
@@ -771,6 +726,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //join us form
 const form = document.querySelector(".join-us");
+if (form) {
 form.addEventListener("submit",function(e) {
  e.preventDefault();
 
@@ -822,4 +778,4 @@ form.addEventListener("submit",function(e) {
     form.submit();
 
 });
-
+}
