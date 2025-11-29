@@ -1239,7 +1239,7 @@ td ul li ul li {
 td ul li ul li ul {
   margin-right: 10px;
   padding-right: 10px;
-  border-right: 2px solid #fbe0c4;
+  border-right: 2px solid #fbe0c4 !important;
 }
 
 td ul li ul li ul li{
@@ -2095,4 +2095,13 @@ body.blue-mode #myBtn .up-img {
 
 body.blue-mode #frontpage {
     content: url("images/frontpage-light.png");
+}
+
+body.blue-mode td ul li ul{
+    border-right: 2px solid #b5b0d4;
+
+}
+.team-member:hover {
+  transform: translateY(-6px) scale(1.03);
+ 
 }
