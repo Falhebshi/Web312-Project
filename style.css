@@ -1230,6 +1230,7 @@ td ul li ul li {
 
 .team-member a {
   color: #b07a28;
+  font-size: medium;
 }
 
 .team-member a:hover {
