@@ -119,7 +119,7 @@
 
 
 <script>
-// ----------- Save Service with Base64 Image -----------
+// Save Service to Local Storage
 
 document.querySelector(".request-form").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -129,7 +129,7 @@ document.querySelector(".request-form").addEventListener("submit", function(e) {
     let price = document.getElementById("service-price").value.trim();
     let photo = document.getElementById("service-photo").files[0];
 
-    // ----------- Validation -----------
+    // is it Valid
 
     if (!name || !description || !price || !photo) {
         alert("يرجى تعبئة جميع الحقول المطلوبة");
@@ -141,19 +141,19 @@ document.querySelector(".request-form").addEventListener("submit", function(e) {
         return;
     }
 
-    // price must be a number via JavaScript only
+    // price must be a number 
     if (isNaN(price)) {
         alert("السعر يجب أن يكون رقمًا فقط");
         return;
     }
 
-    // ----------- Convert image to Base64 -----------
+    // Read the image as base64
 
     let reader = new FileReader();
     reader.onload = function() {
         let base64Image = reader.result;
 
-        let services = JSON.parse(localStorage.getItem("providerServices")) || [];
+        let services = JSON.parse(localStorage.getItem("providerServices")) || []; //array
 
         services.push({
             name: name,
@@ -162,7 +162,7 @@ document.querySelector(".request-form").addEventListener("submit", function(e) {
             img: base64Image
         });
 
-        localStorage.setItem("providerServices", JSON.stringify(services));
+        localStorage.setItem("providerServices", JSON.stringify(services)); //locaal storage
 
         alert("تم إضافة الخدمة بنجاح: " + name);
         document.querySelector(".request-form").reset();

@@ -157,6 +157,8 @@
      <p id="realTimeClock" class="clock"></p>
     <p class="copyright">© ٢٠٢٥ تذكار. جميع الحقوق محفوظة.</p>
   </footer>
+
+
   <script>
 
 let staffMembers = [
@@ -188,9 +190,9 @@ function renderStaff() {
 
 renderStaff();
 
-// ----------------------
+
 // Delete Selected Members
-// ----------------------
+
 document.querySelector(".request-form button.submit-btn").addEventListener("click", function(e) {
     e.preventDefault();  // prevent page reload
 
@@ -211,9 +213,9 @@ document.querySelector(".request-form button.submit-btn").addEventListener("clic
     }
 });
 
-// ----------------------
+
 // Add New Member
-// ----------------------
+
 const addForm = document.querySelectorAll(".request-form")[1]; // second form
 
 addForm.addEventListener("submit", function(e) {
