@@ -341,10 +341,20 @@ requestForm.addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent form submission before validation
 
     // Get form inputs
-    const eventSelected = document.getElementById("event").value;
-    const username = document.getElementById("username").value.trim();
-    const date = document.getElementById("date").value;
-    const description = document.getElementById("description").value.trim();
+    const eventSelectedEl = document.getElementById("event");
+const usernameEl = document.getElementById("username");
+const dateEl = document.getElementById("date");
+const descriptionEl = document.getElementById("description");
+    // check if elements exist 
+if (!eventSelectedEl || !usernameEl || !dateEl || !descriptionEl) {
+    return;
+}
+
+// Get values
+const eventSelected = eventSelectedEl.value;
+const username = usernameEl.value.trim();
+const date = dateEl.value;
+const description = descriptionEl.value.trim();
 
     // ===== Validate Event Selection =====
     if (eventSelected === "") {
