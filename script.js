@@ -147,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //in services page
     document.addEventListener("DOMContentLoaded", function() {
+      //check if we are in services page
+      if (!document.querySelector("#ServicesPageContainer")) return;
     const favButtons = document.querySelectorAll(".fav-btn");
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
@@ -273,31 +275,49 @@ function updateStars() {
   document.getElementById("ratingValue").value = rating;
 }
 
-// ========== Validate Evaluate Service Form ==========
+// ========== Validate Evaluate Service Form ========== 
 const evalForm = document.querySelector(".evaluation-form");
 
 if (evalForm) {
     evalForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const selectedEvent = document.getElementById("event").value;
-        const feedback = document.getElementById("feedback").value.trim();
+        const eventSelect = document.getElementById("event");
+        const feedbackInput = document.getElementById("feedback");
+        const starBox = document.getElementById("starRating");
 
-        if (selectedEvent === "") {
-            alert("الرجاء اختيار الفعالية.");
-            return;
+        // Remove previous error styles
+        eventSelect.classList.remove("input-error");
+        feedbackInput.classList.remove("input-error");
+        starBox.classList.remove("input-error");
+
+        let errors = [];  // to collect error messages
+
+        // check service
+        if (eventSelect.value === "") {
+            eventSelect.classList.add("input-error");
+            errors.push("الرجاء اختيار الفعالية.");
         }
 
+        // check rating
         if (rating === 0) {
-            alert("الرجاء إضافة تقييم.");
+            starBox.classList.add("input-error");
+            errors.push("الرجاء إضافة تقييم.");
+        }
+
+        // check feedback
+        if (feedbackInput.value.trim().length < 1) {
+            feedbackInput.classList.add("input-error");
+            errors.push("الرجاء كتابة تعليقك.");
+        }
+
+        // Display errors if any
+        if (errors.length > 0) {
+            alert(errors.join("\n")); 
             return;
         }
 
-        if (feedback.length < 1) {
-            alert("الرجاء كتابة تعليقك.");
-            return;
-        }
-
+        // All good
         if (rating >= 3) {
             alert("شكرًا لك! سعدنا برأيك.");
         } else {
@@ -307,6 +327,7 @@ if (evalForm) {
         window.location.href = "customer.html";
     });
 }
+
 
 // ===================== Request a Service Validation =====================
 // Select the form
@@ -378,7 +399,7 @@ if (selectedDate < minAllowed) {
         return;
     }
     // Save request always before asking user
-    saveRequest(eventSelected, username, date, description);
+    saveRequest(eventSelected);
     // If everything is valid 
     const stay = confirm("تم إرسال الطلب بنجاح! هل ترغب في البقاء في الصفحة؟");
 
@@ -431,32 +452,9 @@ function displayRequest(eventName, username, date, description) {
 }
 
 // ==========================
-//   EVENTS INFO FROM SERVICES
-// ==========================
-function getServiceDetails(name) {
-
-    const services = [
-        { title: "رحلة منطاد العلا", price: "180", img: "images/img-airballoon.png" },
-        { title: "ورشة فخار", price: "250", img: "images/pottery_image.jpg" },
-        { title: "التزلج الهوائي", price: "400", img: "images/parasailing_image.jpg" },
-        { title: "ورشة الخوص", price: "180", img: "images/ws.jpeg" },
-        { title: "صناعة العطور العربية", price: "300", img: "images/perfume.jpeg" },
-        { title: "ورشة السدو", price: "210", img: "images/sdo.jpeg" },
-        { title: "ورشة الطهي الشعبي", price: "180", img: "images/food.jpeg" },
-        { title: "ركوب الخيل", price: "350", img: "images/horses.jpeg" },
-        { title: "المسار الرياضي", price: "160", img: "images/masar.jpeg" }
-    ];
-
-    return services.find(s => s.title === name) || {
-        price: "غير معروف",
-        img: "images/default.jpg"
-    };
-}
-
-// ==========================
 //       SAVE REQUEST
 // ==========================
-function saveRequest(eventName, username, date, description) {
+function saveRequest(eventName) {
     // Increment service counter
    let counters = JSON.parse(localStorage.getItem("serviceCounters")) || {};
     if (!counters[eventName]) {
@@ -464,97 +462,7 @@ function saveRequest(eventName, username, date, description) {
     }
     counters[eventName]++;
     localStorage.setItem("serviceCounters", JSON.stringify(counters)); 
-
-    // Get service details for save request an order info
-    const service = getServiceDetails(eventName);
-
-    let reqs = JSON.parse(localStorage.getItem("requests")) || [];
-
-    reqs.push({
-        eventName,
-        username,
-        date,
-        description,
-        price: service.price,
-        img: service.img,
-        status: "مكتملة"
-    });
-
-    localStorage.setItem("requests", JSON.stringify(reqs));
 }
-
-// ==========================
-//   LOAD PREVIOUS REQUESTS
-// ==========================
-document.addEventListener("DOMContentLoaded", function () {
-
-    const section = document.getElementById("previous-events");
-    if (!section) return; 
-
-    const list = section.querySelector(".event-list"); 
-    if (!list) return;
-
-    let reqs = JSON.parse(localStorage.getItem("requests")) || [];
-
-    if (reqs.length === 0) return;
-
-    reqs.forEach(req => {
-        const serviceInfo = getServiceDetails(req.eventName);
-
-        const li = document.createElement("li");
-        li.classList.add("event_card");
-
-        li.innerHTML = `
-            <img src="${serviceInfo.img}" class="event_image">
-
-            <div class="event_details">
-                <h3 class="event_title">${req.eventName}</h3>
-
-                <p>التاريخ: ${formatArabicDate(req.date)}</p>
-                <p>السعر: <span class="price">${serviceInfo.price}</span></p>
-                <p>الحالة: مكتملة</p>
-            </div>
-        `;
-
-        list.appendChild(li);
-    });
-});
-
-// ==========================
-//   FORMAT DATE TO ARABIC
-// ==========================
-function formatArabicDate(dateStr) {
-    if (!dateStr) return "";
-
-    const [year, month, day] = dateStr.split("-");
-
-    // convert digits to Arabic
-    const arabicNums = d => d.replace(/\d/g, n => "٠١٢٣٤٥٦٧٨٩"[n]);
-
-    return `${arabicNums(day)} / ${arabicNums(month)} / ${arabicNums(year)}`;
-}
-
-//add events to evaluation form
-document.addEventListener("DOMContentLoaded", function () {
-
-    //check if we are in evaluation page
-    const evalSelect = document.querySelector(".evaluation-form select#event");
-    if (!evalSelect) return;  
-
-    // get previous requests
-    let reqs = JSON.parse(localStorage.getItem("requests")) || [];
-
-    if (reqs.length === 0) return;
-
-    //add options
-    reqs.forEach(req => {
-        const option = document.createElement("option");
-        option.value = req.eventName;
-        option.textContent = req.eventName;
-        evalSelect.appendChild(option);
-    });
-
-});
 
 // ===============================
 //      ARABIC DATE FORMAT

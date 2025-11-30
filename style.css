@@ -2106,3 +2106,13 @@ body.blue-mode td ul li ul{
   transform: translateY(-6px) scale(1.03);
  
 }
+
+.input-error {
+    border: 2px solid red !important;
+}
+
+#starRating.input-error {
+    outline: 3px solid red;
+    border-radius: 10px;
+    padding: 5px;
+}
